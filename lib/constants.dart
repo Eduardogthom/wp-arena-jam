@@ -13,12 +13,14 @@ const kPink = Color(0xFFFF0098);
 const kLink = Color(0xFF91623A);
 
 const kDefaultTextStyle = TextStyle(
+  fontFamily: 'Montserrat',
   color: Colors.white,
   fontWeight: FontWeight.normal,
   fontSize: 20.0,
 );
 
 const kGreetingTextStyle = TextStyle(
+  fontFamily: 'Montserrat',
   color: Colors.white,
   fontWeight: FontWeight.normal,
   fontSize: 20.0,
