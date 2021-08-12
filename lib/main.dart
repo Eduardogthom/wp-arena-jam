@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'components/home_screen.dart';
+import 'screens/home_screen.dart';
 
 void main() {
   runApp(WPArena());
