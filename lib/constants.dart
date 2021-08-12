@@ -1,15 +1,32 @@
-import 'dart:ui';
+import 'package:flutter/material.dart';
 
-class AppColors {
-  // Component colors
-  static const kGray = Color(0xFFC4C4C4);
-  static const kBlack = Color(0xFF18181C);
-  static const kWhite = Color(0xFFFFFFFF);
+// Component colors
+const kGray = Color(0xFFC4C4C4);
+const kBlack = Color(0xFF18181C);
+const kWhite = Color(0xFFFFFFFF);
 
-  // Logo colors
-  static const kBlue = Color(0xFF00E1FF);
-  static const kPink = Color(0xFFFF0098);
+// Logo colors
+const kBlue = Color(0xFF00E1FF);
+const kPink = Color(0xFFFF0098);
 
-  // Support
-  static const kLink = Color(0xFF91623A);
-}
+// Support
+const kLink = Color(0xFF91623A);
+
+const kDefaultTextStyle = TextStyle(
+  color: Colors.white,
+  fontWeight: FontWeight.normal,
+  fontSize: 20.0,
+);
+
+const kGreetingTextStyle = TextStyle(
+  color: Colors.white,
+  fontWeight: FontWeight.normal,
+  fontSize: 20.0,
+);
+
+const kSubTextStyle = TextStyle(
+  fontFamily: 'Montserrat',
+  color: Colors.white,
+  fontWeight: FontWeight.normal,
+  fontSize: 14.0,
+);

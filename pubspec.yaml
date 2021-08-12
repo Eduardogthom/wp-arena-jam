@@ -23,3 +23,5 @@ flutter:
 
   assets:
     - images/
+    - images/games/
+    - images/users/
