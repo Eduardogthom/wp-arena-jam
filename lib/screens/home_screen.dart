@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wp_arena_flutter/components/event_card.dart';
 import 'package:wp_arena_flutter/constants.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -73,22 +74,26 @@ class _HomeScreenState extends State<HomeScreen> {
                       color: Colors.white,
                     ),
                   ),
-                  Card(
-                    color: kGray,
-                    child: Container(
-                      child: Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: CircleAvatar(
-                              radius: 35.0,
-                              backgroundImage:
-                                  AssetImage('images/games/tft.jpg'),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
+                  EventCard(
+                    eventName: 'Partida com os cria',
+                    game: 'League Of Legends',
+                    playerCount: '3/5',
+                    eventTime: '19:30',
+                    gameIcon: AssetImage('images/games/lol.jpg'),
+                  ),
+                  EventCard(
+                    eventName: 'Minezinho com a galera',
+                    game: 'Minecraft',
+                    playerCount: '15',
+                    eventTime: '13:30',
+                    gameIcon: AssetImage('images/games/minecraft.jpg'),
+                  ),
+                  EventCard(
+                    eventName: 'Mix CS: GO',
+                    game: 'Counter-Strike: Global Offensive',
+                    playerCount: '5/5',
+                    eventTime: '13:30',
+                    gameIcon: AssetImage('images/games/csgo.jpg'),
                   ),
                 ],
               ),
