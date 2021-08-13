@@ -42,12 +42,13 @@ class _LoginScreenState extends State<LoginScreen> {
                               style: TextStyle(
                                   fontSize: 32.0,
                                   fontWeight: FontWeight.w600,
-                                  color: kWhite)),
+                                  color: kWhite, 
+                                  fontFamily: 'Montserrat',)),
                         ),
                         SizedBox(height: 20.0),
                         Container(
                           child: TextFormField(
-                            style: TextStyle(color: kWhite),
+                            style: TextStyle(color: kWhite, fontFamily: 'Montserrat',),
                             decoration: InputDecoration(
                               focusedBorder: OutlineInputBorder(
                                 borderSide:
@@ -76,7 +77,8 @@ class _LoginScreenState extends State<LoginScreen> {
                               hintStyle: TextStyle(
                                   color: kWhite,
                                   fontSize: 16.0,
-                                  fontWeight: FontWeight.w500),
+                                  fontWeight: FontWeight.w500,
+                                  fontFamily: 'Montserrat',),
                             ),
                             validator: (value) {
                               print(value);
@@ -93,7 +95,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         Container(
                           child: TextFormField(
-                            style: TextStyle(color: kWhite),
+                            style: TextStyle(color: kWhite, fontFamily: 'Montserrat',),
                             decoration: InputDecoration(
                               focusedBorder: OutlineInputBorder(
                                 borderSide:
@@ -118,7 +120,8 @@ class _LoginScreenState extends State<LoginScreen> {
                               hintStyle: TextStyle(
                                   color: kWhite,
                                   fontSize: 16.0,
-                                  fontWeight: FontWeight.w500),
+                                  fontWeight: FontWeight.w500,
+                                  fontFamily: 'Montserrat',),
                               errorBorder: OutlineInputBorder(
                                 borderSide:
                                     BorderSide(color: kCrimson, width: 1.0),
@@ -152,7 +155,8 @@ class _LoginScreenState extends State<LoginScreen> {
                             child: Text(
                               "LOGIN",
                               style: TextStyle(
-                                  fontSize: 25.0, fontWeight: FontWeight.w500),
+                                  fontSize: 25.0, fontWeight: FontWeight.w500, 
+                                  fontFamily: 'Montserrat',),
                             ),
                             style: ButtonStyle(
                               backgroundColor:
@@ -180,7 +184,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: TextButton(
                       child: Text(
                         "Esqueci minha senha",
-                        style: TextStyle(color: kWhite),
+                        style: TextStyle(color: kWhite,
+                        fontFamily: 'Montserrat',),
                       ),
                       onPressed: () => {},
                     ),
@@ -188,14 +193,16 @@ class _LoginScreenState extends State<LoginScreen> {
                   Row(
                     children: [
                       Text("Não possui conta?",
-                          style: TextStyle(color: kWhite)),
+                          style: TextStyle(color: kWhite, 
+                          fontFamily: 'Montserrat',)),
                       SizedBox(
                         width: 7.0,
                       ),
                       TextButton(
                         child: Text("Cadastre-se aqui",
                             style: TextStyle(
-                                color: kWhite, fontWeight: FontWeight.bold)),
+                                color: kWhite, fontWeight: FontWeight.bold, 
+                                fontFamily: 'Montserrat',)),
                         onPressed: () => {},
                       )
                     ],
