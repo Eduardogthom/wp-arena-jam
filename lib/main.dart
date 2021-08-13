@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wp_arena_flutter/screens/login_screen.dart';
 
 import 'screens/home_screen.dart';
 
@@ -11,11 +12,11 @@ class WPArena extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
-      initialRoute: HomeScreen.id,
+      home: LoginScreen(),
+      initialRoute: LoginScreen.id,
       routes: {
         HomeScreen.id: (context) => HomeScreen(),
-        // LoginScreen.id: (context) => LoginScreen(),
+        LoginScreen.id: (context) => LoginScreen(),
         // RegistrationScreen.id: (context) => RegistrationScreen(),
       },
     );
