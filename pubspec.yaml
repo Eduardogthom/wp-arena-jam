@@ -18,6 +18,8 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+  flutter_native_splash: ^0.2.8
+
 flutter:
   uses-material-design: true
 
@@ -27,6 +29,12 @@ flutter:
     - images/users/
 
   fonts:
-  - family: Montserrat
-    fonts:
-      - asset: fonts/Montserrat-Regular.ttf
+    - family: Montserrat
+      fonts:
+        - asset: fonts/Montserrat-Regular.ttf
+
+flutter_native_splash:
+  color: "#18181C"
+  image: images/logo_column.png
+  android: true
+  ios: true
