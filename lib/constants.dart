@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 const kGray = Color(0xFFC4C4C4);
 const kBlack = Color(0xFF18181C);
 const kWhite = Color(0xFFFFFFFF);
+const kCrimson = Color(0xffDC143C);
 
 // Logo colors
 const kBlue = Color(0xFF00E1FF);
