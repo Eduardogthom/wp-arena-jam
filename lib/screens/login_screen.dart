@@ -95,6 +95,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         Container(
                           child: TextFormField(
+                            obscureText: true,
                             style: TextStyle(color: kWhite, fontFamily: 'Montserrat',),
                             decoration: InputDecoration(
                               focusedBorder: OutlineInputBorder(
