@@ -6,19 +6,29 @@ class Input extends StatelessWidget {
     Key? key,
     required this.hintText,
     required this.errorMessage,
+    required this.enabled,
     this.prefixIcon,
   }) : super(key: key);
 
   final String hintText;
   final String errorMessage;
   final IconData? prefixIcon;
+  final bool enabled;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      style: TextStyle(color: kWhite),
+      enabled: enabled,
+      style: TextStyle(
+        color: kWhite,
+        fontSize: 14.0,
+        fontWeight: FontWeight.w500,
+        fontFamily: 'Montserrat',
+      ),
       decoration: InputDecoration(
         isDense: true,
+        filled: !enabled,
+        fillColor: Color.fromRGBO(196, 196, 196, 0.2),
         contentPadding: EdgeInsets.all(8),
         // contentPadding: EdgeInsets.all(0),
         focusedBorder: OutlineInputBorder(
@@ -26,6 +36,10 @@ class Input extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
         ),
         enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: kWhite, width: 1.0),
+          borderRadius: BorderRadius.circular(10),
+        ),
+        disabledBorder: OutlineInputBorder(
           borderSide: BorderSide(color: kWhite, width: 1.0),
           borderRadius: BorderRadius.circular(10),
         ),
@@ -38,12 +52,13 @@ class Input extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
         ),
         hintStyle: TextStyle(
-          color: kWhite,
+          color: enabled ? kWhite : kGray,
+          fontSize: 14,
         ),
         hintText: hintText,
         prefixIcon: Icon(
           prefixIcon,
-          color: kWhite,
+          color: enabled ? kWhite : kGray,
           size: 20,
         ),
       ),
