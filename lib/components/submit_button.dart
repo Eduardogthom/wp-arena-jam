@@ -2,11 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:wp_arena_flutter/constants.dart';
 
 class SubmitButton extends StatelessWidget {
-  const SubmitButton({Key? key, required this.formKey, this.buttonColor})
+  const SubmitButton(
+      {Key? key,
+      required this.formKey,
+      this.buttonColor,
+      required this.labelText})
       : super(key: key);
 
   final GlobalKey<FormState> formKey;
   final Color? buttonColor;
+  final String labelText;
 
   @override
   Widget build(BuildContext context) {
@@ -23,9 +28,9 @@ class SubmitButton extends StatelessWidget {
             }
         },
         child: Text(
-          "LOGIN",
+          labelText,
           style: TextStyle(
-            fontSize: 25.0,
+            fontSize: 18.0,
             fontWeight: FontWeight.w500,
             fontFamily: 'Montserrat',
           ),
@@ -33,7 +38,7 @@ class SubmitButton extends StatelessWidget {
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.resolveWith<Color>(
             (Set<MaterialState> states) {
-              return kPink;
+              return buttonColor ?? kPink;
             },
           ),
         ),
