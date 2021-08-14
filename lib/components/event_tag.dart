@@ -11,8 +11,11 @@ class EventTag extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          border: Border.all(color: kWhite),
-          borderRadius: BorderRadius.all(Radius.circular(5))),
+        border: Border.all(color: kWhite),
+        borderRadius: BorderRadius.all(
+          Radius.circular(5),
+        ),
+      ),
       child: Padding(
         padding: const EdgeInsets.symmetric(
           horizontal: 15,

@@ -27,6 +27,7 @@ flutter:
     - images/
     - images/games/
     - images/users/
+    - images/avatars/
 
   fonts:
     - family: Montserrat

@@ -169,7 +169,7 @@ class _EventScreenState extends State<EventScreen> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 25, horizontal: 20),
+                padding: EdgeInsets.fromLTRB(20, 25, 20, 10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -195,14 +195,12 @@ class _EventScreenState extends State<EventScreen> {
                         )
                       ],
                     ),
-                    SizedBox(
-                      height: 12,
-                    ),
                   ],
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(20.0),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
                 child: SizedBox(
                   height: 180.0,
                   child: ListView.builder(
@@ -210,42 +208,51 @@ class _EventScreenState extends State<EventScreen> {
                     shrinkWrap: true,
                     scrollDirection: Axis.horizontal,
                     itemCount: 5,
-                    itemBuilder: (BuildContext context, int index) => Card(
-                      color: kGray,
-                      child: Container(
-                        width: 160,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage('images/users/user.png'),
-                            fit: BoxFit.cover,
+                    itemBuilder: (BuildContext context, int index) => Padding(
+                      padding: const EdgeInsets.only(right: 5),
+                      child: Card(
+                        color: kGray,
+                        child: Container(
+                          width: 160,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(2),
+                            ),
+                            image: DecorationImage(
+                              image: index == 0
+                                  ? AssetImage("images/avatars/avatar.png")
+                                  : AssetImage(
+                                      "images/avatars/avatar_${index + 1}.png"),
+                              fit: BoxFit.cover,
+                            ),
                           ),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Buratti',
-                                style: kSubTextStyle,
-                              ),
-                              Row(
-                                children: [
-                                  Icon(
-                                    Icons.stars,
-                                    color: kWhite,
-                                  ),
-                                  SizedBox(
-                                    width: 5,
-                                  ),
-                                  Text(
-                                    '5.0',
-                                    style: kSubTextStyle,
-                                  ),
-                                ],
-                              )
-                            ],
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Buratti',
+                                  style: kSubTextStyle,
+                                ),
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons.stars,
+                                      color: kWhite,
+                                    ),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Text(
+                                      '5.0',
+                                      style: kSubTextStyle,
+                                    ),
+                                  ],
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -253,10 +260,28 @@ class _EventScreenState extends State<EventScreen> {
                   ),
                 ),
               ),
+              SizedBox(
+                height: 15,
+              )
             ],
           ),
         ),
       ),
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 0),
+        child: new FloatingActionButton(
+          elevation: 0.0,
+          child: new Icon(
+            Icons.arrow_back,
+            size: 40,
+          ),
+          backgroundColor: Colors.transparent,
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
     );
   }
 }
