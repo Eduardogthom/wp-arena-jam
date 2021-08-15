@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wp_arena_flutter/screens/game_screen.dart';
 import 'package:wp_arena_flutter/screens/login_screen.dart';
 
 import 'screens/home_screen.dart';
@@ -17,6 +18,7 @@ class WPArena extends StatelessWidget {
       routes: {
         HomeScreen.id: (context) => HomeScreen(),
         LoginScreen.id: (context) => LoginScreen(),
+        GameScreen.id: (context) => GameScreen(),
         // RegistrationScreen.id: (context) => RegistrationScreen(),
       },
     );
