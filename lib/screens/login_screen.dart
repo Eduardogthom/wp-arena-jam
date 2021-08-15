@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wp_arena_flutter/constants.dart';
+import 'package:wp_arena_flutter/screens/home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -157,9 +158,14 @@ class _LoginScreenState extends State<LoginScreen> {
                             onPressed: () => {
                               if (_formKey.currentState!.validate())
                                 {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                    const SnackBar(content: Text('Navigate!')),
-                                  )
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => HomeScreen(
+                                        userName: 'Oie',
+                                      ),
+                                    ),
+                                  ),
                                 }
                             },
                             child: Text(
