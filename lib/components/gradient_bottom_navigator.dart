@@ -1,10 +1,58 @@
 import 'package:flutter/material.dart';
+import 'package:wp_arena_flutter/screens/game_screen.dart';
+import 'package:wp_arena_flutter/screens/home_screen.dart';
+import 'package:wp_arena_flutter/screens/profile_screen.dart';
 
 import '../constants.dart';
 
-class GradientBottomNavigationBar extends StatelessWidget {
+class GradientBottomNavigationBar extends StatefulWidget {
   GradientBottomNavigationBar({required this.screenName});
   final String screenName;
+
+  @override
+  _GradientBottomNavigationBarState createState() =>
+      _GradientBottomNavigationBarState();
+}
+
+class _GradientBottomNavigationBarState
+    extends State<GradientBottomNavigationBar> {
+  int _selectedIndex = 0;
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+    print(_selectedIndex);
+    switch (index) {
+      case 0:
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => HomeScreen(
+              userName: 'Oie',
+            ),
+          ),
+        );
+        break;
+      case 1:
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => GameScreen(),
+          ),
+        );
+        break;
+      case 2:
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ProfileScreen(),
+          ),
+        );
+        break;
+      default:
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +79,7 @@ class GradientBottomNavigationBar extends StatelessWidget {
               child: Icon(
                 Icons.home,
                 size: 30,
-                color: screenName == 'home' ? kBlue : kWhite,
+                color: widget.screenName == 'home' ? kBlue : kWhite,
               ),
             ),
             label: 'Home',
@@ -40,7 +88,7 @@ class GradientBottomNavigationBar extends StatelessWidget {
             icon: Icon(
               Icons.add_circle,
               size: 72,
-              color: screenName == 'add_game' ? kBlue : kWhite,
+              color: widget.screenName == 'game' ? kBlue : kWhite,
             ),
             label: 'Add Game',
           ),
@@ -50,14 +98,14 @@ class GradientBottomNavigationBar extends StatelessWidget {
               child: Icon(
                 Icons.person,
                 size: 30,
-                color: screenName == 'profile' ? kBlue : kWhite,
+                color: widget.screenName == 'profile' ? kBlue : kWhite,
               ),
             ),
             label: 'School',
           ),
         ],
-        //currentIndex: _selectedIndex,
-        //onTap: _onItemTapped,
+        currentIndex: _selectedIndex,
+        onTap: _onItemTapped,
       ),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:wp_arena_flutter/components/gradient_bottom_navigator.dart';
 import 'package:wp_arena_flutter/constants.dart';
 //import 'package:wp_arena_flutter/components/gradient_bottom_navigator.dart';
 
@@ -532,8 +533,9 @@ class _GameScreenState extends State<GameScreen> {
           ),
         ),
       ),
-      //Botão de navegação
-      //bottomNavigationBar: GradientBottomNavigationBar(screenName: 'home',),
+      bottomNavigationBar: GradientBottomNavigationBar(
+        screenName: 'game',
+      ),
     );
   }
 }

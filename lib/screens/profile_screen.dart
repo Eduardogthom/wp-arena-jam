@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wp_arena_flutter/components/avatar_button.dart';
 import 'package:wp_arena_flutter/components/dropdown.dart';
+import 'package:wp_arena_flutter/components/gradient_bottom_navigator.dart';
 import 'package:wp_arena_flutter/components/input.dart';
 import 'package:wp_arena_flutter/components/submit_button.dart';
 
@@ -249,6 +250,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: GradientBottomNavigationBar(
+        screenName: 'profile',
       ),
     );
   }
