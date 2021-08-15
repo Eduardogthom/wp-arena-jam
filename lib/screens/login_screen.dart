@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wp_arena_flutter/constants.dart';
 import 'package:wp_arena_flutter/screens/home_screen.dart';
+import 'package:wp_arena_flutter/screens/sign_in_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -227,7 +228,14 @@ class _LoginScreenState extends State<LoginScreen> {
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Montserrat',
                             )),
-                        onPressed: () => {},
+                        onPressed: () => {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SignInScreen(),
+                            ),
+                          ),
+                        },
                       )
                     ],
                   ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wp_arena_flutter/constants.dart';
+import 'package:wp_arena_flutter/screens/home_screen.dart';
 
 class SubmitButton extends StatelessWidget {
   const SubmitButton(
@@ -22,9 +23,14 @@ class SubmitButton extends StatelessWidget {
         onPressed: () => {
           if (formKey.currentState!.validate())
             {
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('Navigate!')),
-              )
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HomeScreen(
+                    userName: 'Oie',
+                  ),
+                ),
+              ),
             }
         },
         child: Text(
