@@ -1,7 +1,4 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:wp_arena_flutter/components/event_card.dart';
 import 'package:wp_arena_flutter/components/gradient_bottom_navigator.dart';
 import 'package:wp_arena_flutter/components/history_list.dart';
 import 'package:wp_arena_flutter/components/in_progress_list.dart';
@@ -10,6 +7,8 @@ import 'package:wp_arena_flutter/constants.dart';
 class HomeScreen extends StatefulWidget {
   static String id = 'home_screen';
 
+  HomeScreen({required this.userName});
+  final String userName;
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }

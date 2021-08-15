@@ -13,10 +13,9 @@ class WPArena extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
-      initialRoute: HomeScreen.id,
+      home: LoginScreen(),
+      initialRoute: LoginScreen.id,
       routes: {
-        HomeScreen.id: (context) => HomeScreen(),
         LoginScreen.id: (context) => LoginScreen(),
         // RegistrationScreen.id: (context) => RegistrationScreen(),
         ProfileScreen.id: (context) => ProfileScreen()

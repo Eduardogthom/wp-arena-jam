@@ -40,9 +40,9 @@ class GradientBottomNavigationBar extends StatelessWidget {
             icon: Icon(
               Icons.add_circle,
               size: 72,
-              color: kWhite,
+              color: screenName == 'add_game' ? kBlue : kWhite,
             ),
-            label: 'Business',
+            label: 'Add Game',
           ),
           BottomNavigationBarItem(
             icon: Padding(
