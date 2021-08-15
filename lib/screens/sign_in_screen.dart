@@ -15,7 +15,7 @@ class SignInScreen extends StatefulWidget {
 class _SignInScreenState extends State<SignInScreen> {
   final _formKey = GlobalKey<FormState>();
 
-  String _selectedGender = "Outro";
+  String _selectedGender = 'Selecione seu gênero';
 
   @override
   Widget build(BuildContext context) {
@@ -80,6 +80,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 Dropdown(
                   selectedGender: _selectedGender,
                   items: [
+                    'Selecione seu gênero',
                     'Feminino',
                     'Masculino',
                     'Outro',

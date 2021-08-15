@@ -16,7 +16,7 @@ class ScheduleMatchScreen extends StatefulWidget {
 class _ScheduleMatchScreenState extends State<ScheduleMatchScreen> {
   final _formKey = GlobalKey<FormState>();
 
-  String _selectedGender = "Não";
+  String _selectedGender = 'Partida privada';
 
   @override
   Widget build(BuildContext context) {
@@ -99,6 +99,7 @@ class _ScheduleMatchScreenState extends State<ScheduleMatchScreen> {
                     Expanded(
                       child: Dropdown(
                         items: [
+                          'Partida privada',
                           'Sim',
                           'Não',
                         ],
