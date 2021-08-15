@@ -6,10 +6,12 @@ class Dropdown extends StatelessWidget {
     Key? key,
     required this.selectedGender,
     required this.onChanged,
+    required this.items,
   }) : super(key: key);
 
   final String selectedGender;
   final void Function(String?)? onChanged;
+  final List<String> items;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +21,7 @@ class Dropdown extends StatelessWidget {
         decoration: InputDecoration(
           isDense: true,
           fillColor: Color.fromRGBO(196, 196, 196, 0.2),
-          contentPadding: EdgeInsets.all(12),
+          contentPadding: EdgeInsets.all(11),
           // contentPadding: EdgeInsets.all(0),
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(color: kBlue, width: 1.0),
@@ -47,12 +49,7 @@ class Dropdown extends StatelessWidget {
           ),
           hintText: 'Gênero',
         ),
-        items: <String>[
-          'Feminino',
-          'Masculino',
-          'Outro',
-          'Prefiro não informar'
-        ].map<DropdownMenuItem<String>>((String value) {
+        items: items.map<DropdownMenuItem<String>>((String value) {
           return DropdownMenuItem<String>(
             value: value,
             child: Center(
@@ -60,16 +57,7 @@ class Dropdown extends StatelessWidget {
             ),
           );
         }).toList(),
-
         onChanged: onChanged,
-        // hint: SizedBox(
-        //   width: double.infinity,
-        //   child: Text(
-        //     "Selecione seu gênero",
-        //     style: TextStyle(color: kWhite, fontFamily: 'Montserrat'),
-        //     textAlign: TextAlign.center,
-        //   ),
-        // ),
         dropdownColor: kBlack,
         style: TextStyle(color: kWhite, fontFamily: 'Montserrat'),
         isExpanded: true,
