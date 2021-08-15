@@ -39,3 +39,5 @@ flutter_native_splash:
   image: images/logo_column.png
   android: true
   ios: true
+  android_gravity: fill
+  ios_content_mode: scaleAspectFill
