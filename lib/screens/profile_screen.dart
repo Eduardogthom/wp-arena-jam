@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wp_arena_flutter/components/avatar_button.dart';
 import 'package:wp_arena_flutter/components/dropdown.dart';
 import 'package:wp_arena_flutter/components/input.dart';
 import 'package:wp_arena_flutter/components/submit_button.dart';
@@ -51,19 +52,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         children: [
                           Row(
                             children: [
-                              Column(
-                                children: [
-                                  CircleAvatar(
-                                    foregroundImage:
-                                        AssetImage('images/users/user_6.png'),
-                                    radius: 45.0,
-                                  ),
-                                  TextButton(
-                                    onPressed: () => {},
-                                    child: Text("Alterar avatar"),
-                                  ),
-                                ],
-                              ),
+                              AvatarButton(
+                                  onTap: () {},
+                                  foregroundImage:
+                                      AssetImage('images/users/user_6.png')),
                               Padding(
                                 padding: const EdgeInsets.all(12.0),
                                 child: Container(
@@ -173,6 +165,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Dropdown(
+                      items: [
+                        'Feminino',
+                        'Masculino',
+                        'Outro',
+                        'Prefiro não informar'
+                      ],
                       selectedGender: _selectedGender,
                       onChanged: ((newValue) {
                         setState(() => {_selectedGender = newValue.toString()});

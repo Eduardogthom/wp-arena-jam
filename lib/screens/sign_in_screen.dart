@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wp_arena_flutter/components/avatar_button.dart';
 import 'package:wp_arena_flutter/components/dropdown.dart';
 import 'package:wp_arena_flutter/components/input.dart';
 import 'package:wp_arena_flutter/components/submit_button.dart';
@@ -38,33 +39,16 @@ class _SignInScreenState extends State<SignInScreen> {
             key: _formKey,
             child: Column(
               children: [
-                Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Column(
-                        children: [
-                          Row(
-                            children: [
-                              Column(
-                                children: [
-                                  CircleAvatar(
-                                    foregroundImage:
-                                        AssetImage('images/users/user_6.png'),
-                                    radius: 45.0,
-                                  ),
-                                  TextButton(
-                                    onPressed: () => {},
-                                    child: Text("Alterar avatar"),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    AvatarButton(
+                        onTap: () {},
+                        foregroundImage: AssetImage('images/users/user_6.png'))
+                  ],
+                ),
+                SizedBox(
+                  height: 26,
                 ),
                 Input(
                   enabled: true,
@@ -95,6 +79,12 @@ class _SignInScreenState extends State<SignInScreen> {
                 ),
                 Dropdown(
                   selectedGender: _selectedGender,
+                  items: [
+                    'Feminino',
+                    'Masculino',
+                    'Outro',
+                    'Prefiro não informar'
+                  ],
                   onChanged: ((newValue) {
                     setState(() => {_selectedGender = newValue.toString()});
                   }),
