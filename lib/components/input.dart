@@ -63,7 +63,7 @@ class Input extends StatelessWidget {
         ),
       ),
       validator: (value) {
-        if (value == null || value.isEmpty) {
+        if ((value == null || value.isEmpty)) {
           return errorMessage;
         }
         return null;
