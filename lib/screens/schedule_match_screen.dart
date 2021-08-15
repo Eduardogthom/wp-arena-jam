@@ -75,9 +75,9 @@ class _ScheduleMatchScreenState extends State<ScheduleMatchScreen> {
                 ),
                 Input(
                   enabled: true,
+                  maxLines: 8,
                   hintText: 'Regras',
-                  errorMessage:
-                      'Por favor, digite o número de jogadores na partida.',
+                  errorMessage: 'Por favor, descreva as regras do jogo.',
                 ),
                 SizedBox(
                   height: 16,

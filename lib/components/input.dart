@@ -7,6 +7,7 @@ class Input extends StatelessWidget {
     required this.hintText,
     required this.errorMessage,
     required this.enabled,
+    this.maxLines,
     this.prefixIcon,
   }) : super(key: key);
 
@@ -14,10 +15,12 @@ class Input extends StatelessWidget {
   final String errorMessage;
   final IconData? prefixIcon;
   final bool enabled;
+  final int? maxLines;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      maxLines: maxLines ?? 1,
       enabled: enabled,
       style: TextStyle(
         color: kWhite,
@@ -56,6 +59,12 @@ class Input extends StatelessWidget {
           fontSize: 14,
         ),
         hintText: hintText,
+        prefixIconConstraints: prefixIcon == null
+            ? BoxConstraints(
+                minHeight: 48,
+                // minWidth: 0,
+              )
+            : null,
         prefixIcon: Icon(
           prefixIcon,
           color: enabled ? kWhite : kGray,
