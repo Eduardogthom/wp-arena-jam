@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wp_arena_flutter/components/dropdown.dart';
 import 'package:wp_arena_flutter/components/input.dart';
 import 'package:wp_arena_flutter/components/submit_button.dart';
 
@@ -166,50 +167,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 25.0),
                 child: Container(
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: Color.fromRGBO(0, 0, 0, 1),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: DropdownButton(
-                    value: _selectedGender,
-                    underline: SizedBox(),
-                    items: <String>[
-                      'Feminino',
-                      'Masculino',
-                      'Outro',
-                      'Prefiro não informar'
-                    ].map<DropdownMenuItem<String>>((String value) {
-                      return DropdownMenuItem<String>(
-                        value: value,
-                        child: Center(
-                          child: Text(value),
-                        ),
-                      );
-                    }).toList(),
-                    onChanged: ((newValue) {
-                      setState(() => {_selectedGender = newValue.toString()});
-                    }),
-                    hint: SizedBox(
-                      width: double.infinity,
-                      child: Text(
-                        "Selecione seu gênero",
-                        style:
-                            TextStyle(color: kWhite, fontFamily: 'Montserrat'),
-                        textAlign: TextAlign.center,
-                      ),
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Color.fromRGBO(0, 0, 0, 1),
+                      borderRadius: BorderRadius.circular(10),
                     ),
-                    dropdownColor: kBlack,
-                    style: TextStyle(color: kWhite, fontFamily: 'Montserrat'),
-                    isExpanded: true,
-                    iconEnabledColor: kWhite,
-                    icon: Container(
-                        child: Padding(
-                      padding: const EdgeInsets.only(right: 8.0),
-                      child: Icon(Icons.arrow_drop_down),
+                    child: Dropdown(
+                      selectedGender: _selectedGender,
+                      onChanged: ((newValue) {
+                        setState(() => {_selectedGender = newValue.toString()});
+                      }),
                     )),
-                  ),
-                ),
               ),
               SizedBox(height: 25.0),
               Padding(
