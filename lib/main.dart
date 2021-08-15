@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wp_arena_flutter/screens/game_screen.dart';
 import 'package:wp_arena_flutter/screens/login_screen.dart';
 import 'package:wp_arena_flutter/screens/profile_screen.dart';
 import 'package:wp_arena_flutter/screens/schedule_match_screen.dart';
@@ -23,6 +24,7 @@ class WPArena extends StatelessWidget {
         SignInScreen.id: (context) => SignInScreen(),
         ProfileScreen.id: (context) => ProfileScreen(),
         ScheduleMatchScreen.id: (context) => ScheduleMatchScreen(),
+         GameScreen.id: (context) => GameScreen(),
       },
     );
   }
