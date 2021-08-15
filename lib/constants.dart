@@ -33,3 +33,23 @@ const kSubTextStyle = TextStyle(
   fontWeight: FontWeight.normal,
   fontSize: 14.0,
 );
+
+const kActiveFilterTextStyle = TextStyle(
+  fontFamily: 'Montserrat',
+  fontSize: 20.0,
+  shadows: [Shadow(color: Colors.white, offset: Offset(0, -10))],
+  color: Colors.transparent,
+  decoration: TextDecoration.underline,
+  decorationColor: Colors.white,
+  decorationThickness: 1.5,
+);
+
+const kUnactiveFilterTextStyle = TextStyle(
+  fontFamily: 'Montserrat',
+  fontSize: 20.0,
+  shadows: [Shadow(color: Colors.white, offset: Offset(0, -10))],
+  color: Colors.transparent,
+  decoration: TextDecoration.underline,
+  decorationColor: Colors.transparent,
+  decorationThickness: 1.5,
+);
