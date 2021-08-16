@@ -35,12 +35,6 @@ flutter:
       fonts:
         - asset: fonts/Montserrat-Regular.ttf
 
-# flutter_icons:
-#   image_path_android: "images/1024.png"
-#   image_path_ios: "images/1024.png"
-#   android: true
-#   ios: true
-
 flutter_native_splash:
   color: "#18181C"
   image: images/splash.png
