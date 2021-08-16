@@ -66,8 +66,9 @@ class _EventGameState extends State<EventGame> {
                       context,
                       MaterialPageRoute(
                         builder: (context) => ScheduleMatchScreen(
-                            //userName: widget.userName,
-                            ),
+                          game: widget.game,
+                          imageUrl: widget.imageUrl,
+                        ),
                       ),
                     ),
                   },

@@ -65,6 +65,8 @@ class CreateGameList extends StatelessWidget {
                 heroTag: getRandomString(5),
                 totalPlayers: "3",
                 maxPlayers: "5",
+                tag1: 'COMPETITIVO',
+                tag2: 'ONLINE',
               ),
               EventCard(
                 eventName: 'Dar uma upada de leves',
@@ -75,6 +77,8 @@ class CreateGameList extends StatelessWidget {
                 heroTag: getRandomString(5),
                 totalPlayers: "15",
                 maxPlayers: "15",
+                tag1: 'COMPETITIVO',
+                tag2: 'ONLINE',
               ),
               SizedBox(
                 height: 30.0,
@@ -107,6 +111,8 @@ class CreateGameList extends StatelessWidget {
                 heroTag: getRandomString(5),
                 totalPlayers: "3",
                 maxPlayers: "5",
+                tag1: 'COMPETITIVO',
+                tag2: 'ONLINE',
               ),
               EventCard(
                 eventName: "Cai de rank :'(",
@@ -117,6 +123,8 @@ class CreateGameList extends StatelessWidget {
                 heroTag: getRandomString(5),
                 totalPlayers: "15",
                 maxPlayers: "15",
+                tag1: 'COMPETITIVO',
+                tag2: 'ONLINE',
               ),
               EventCard(
                 eventName: 'Pipoco em Dó Maior',
@@ -127,6 +135,8 @@ class CreateGameList extends StatelessWidget {
                 heroTag: getRandomString(5),
                 totalPlayers: "5",
                 maxPlayers: "5",
+                tag1: 'COMPETITIVO',
+                tag2: 'ONLINE',
               ),
               SizedBox(
                 height: 30.0,

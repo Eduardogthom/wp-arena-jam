@@ -50,6 +50,8 @@ class InProgressGames extends StatelessWidget {
                 heroTag: getRandomString(5),
                 totalPlayers: "3",
                 maxPlayers: "5",
+                tag1: 'MOBA',
+                tag2: 'ONLINE',
               ),
               EventCard(
                 eventName: 'Minezinho com a galera',
@@ -60,16 +62,20 @@ class InProgressGames extends StatelessWidget {
                 heroTag: getRandomString(5),
                 totalPlayers: "15",
                 maxPlayers: "15",
+                tag1: 'SANDBOX',
+                tag2: 'CRIATIVO',
               ),
               EventCard(
                 eventName: 'Mix CS: GO',
-                game: 'Counter-Strike: Global Offensive',
+                game: 'Counter-Strike: GO',
                 playerCount: '5/5',
                 eventTime: '13:30',
                 imageUrl: 'images/games/csgo.jpg',
                 heroTag: getRandomString(5),
                 totalPlayers: "5",
                 maxPlayers: "5",
+                tag1: 'FPS',
+                tag2: 'COMPETITIVO',
               ),
               SizedBox(
                 height: 30.0,
@@ -99,6 +105,8 @@ class InProgressGames extends StatelessWidget {
                 heroTag: getRandomString(5),
                 totalPlayers: "3",
                 maxPlayers: "5",
+                tag1: 'BATTLE ROYALE',
+                tag2: 'ONLINE',
               ),
               EventCard(
                 eventName: 'Grind de Wowzinho',
@@ -109,6 +117,8 @@ class InProgressGames extends StatelessWidget {
                 heroTag: getRandomString(5),
                 totalPlayers: "15",
                 maxPlayers: "15",
+                tag1: 'MMORPG',
+                tag2: 'ONLINE',
               ),
               EventCard(
                 eventName: 'Ludo alucinante',
@@ -119,6 +129,8 @@ class InProgressGames extends StatelessWidget {
                 heroTag: getRandomString(5),
                 totalPlayers: "5",
                 maxPlayers: "5",
+                tag1: 'TABULEIRO',
+                tag2: 'ONLINE',
               ),
               SizedBox(
                 height: 30.0,
@@ -148,6 +160,8 @@ class InProgressGames extends StatelessWidget {
                 heroTag: getRandomString(5),
                 totalPlayers: "3",
                 maxPlayers: "5",
+                tag1: 'FUTEBOL',
+                tag2: 'ONLINE',
               ),
               EventCard(
                 eventName: 'Warzone da emoção',
@@ -158,6 +172,8 @@ class InProgressGames extends StatelessWidget {
                 heroTag: getRandomString(5),
                 totalPlayers: "15",
                 maxPlayers: "15",
+                tag1: 'BATTLE ROYALE',
+                tag2: 'FPS',
               ),
               EventCard(
                 eventName: 'Futeba de carro',
@@ -168,6 +184,8 @@ class InProgressGames extends StatelessWidget {
                 heroTag: getRandomString(5),
                 totalPlayers: "5",
                 maxPlayers: "5",
+                tag1: 'FUTEBOL',
+                tag2: 'CORRIDA',
               ),
               SizedBox(
                 height: 30.0,
@@ -197,6 +215,8 @@ class InProgressGames extends StatelessWidget {
                 heroTag: getRandomString(5),
                 totalPlayers: "3",
                 maxPlayers: "5",
+                tag1: 'FUTEBOL',
+                tag2: 'ONLINE',
               ),
               EventCard(
                 eventName: 'Paladins safado',
@@ -207,6 +227,8 @@ class InProgressGames extends StatelessWidget {
                 heroTag: getRandomString(5),
                 totalPlayers: "15",
                 maxPlayers: "15",
+                tag1: 'COMPETITIVO',
+                tag2: 'FPS',
               ),
               EventCard(
                 eventName: 'Grind no Destiny',
@@ -217,6 +239,8 @@ class InProgressGames extends StatelessWidget {
                 heroTag: getRandomString(5),
                 totalPlayers: "5",
                 maxPlayers: "5",
+                tag1: 'RPG',
+                tag2: 'FPS',
               ),
             ],
           ),

@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 
 class EventTag extends StatelessWidget {
-  const EventTag({
-    Key? key,
-  }) : super(key: key);
+  const EventTag({Key? key, required this.tagName}) : super(key: key);
+
+  final String tagName;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class EventTag extends StatelessWidget {
           vertical: 5,
         ),
         child: Text(
-          'ONLINE',
+          tagName,
           style: kSubTextStyle,
         ),
       ),

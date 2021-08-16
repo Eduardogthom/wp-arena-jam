@@ -4,10 +4,11 @@ import 'package:wp_arena_flutter/components/input.dart';
 import 'package:wp_arena_flutter/components/submit_button.dart';
 
 import '../constants.dart';
+import 'home_screen.dart';
 
-class EventScreen extends StatefulWidget {
+class EventScreenCreated extends StatefulWidget {
   static String id = 'event_screen';
-  EventScreen(
+  EventScreenCreated(
       {required this.heroTag,
       required this.imageUrl,
       required this.eventName,
@@ -25,11 +26,12 @@ class EventScreen extends StatefulWidget {
   final String imageUrl;
   final String tag1;
   final String tag2;
+
   @override
-  _EventScreenState createState() => _EventScreenState();
+  _EventScreenCreatedState createState() => _EventScreenCreatedState();
 }
 
-class _EventScreenState extends State<EventScreen> {
+class _EventScreenCreatedState extends State<EventScreenCreated> {
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
@@ -337,7 +339,14 @@ class _EventScreenState extends State<EventScreen> {
           ),
           backgroundColor: Colors.transparent,
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => HomeScreen(
+                  userName: 'Sapo',
+                ),
+              ),
+            );
           },
         ),
       ),
