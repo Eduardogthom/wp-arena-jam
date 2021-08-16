@@ -66,6 +66,7 @@ class GamesHistory extends StatelessWidget {
                 maxPlayers: "5",
                 tag1: 'MOBA',
                 tag2: 'ONLINE',
+                private: true,
               ),
               SizedBox(
                 height: 30.0,

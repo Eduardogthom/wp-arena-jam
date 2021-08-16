@@ -17,6 +17,7 @@ class EventCard extends StatelessWidget {
     required this.tag1,
     required this.tag2,
     this.done = false,
+    this.private = false,
   });
 
   final String eventName;
@@ -30,6 +31,7 @@ class EventCard extends StatelessWidget {
   final String tag1;
   final String tag2;
   final bool done;
+  final bool private;
 
   @override
   Widget build(BuildContext context) {
@@ -52,6 +54,7 @@ class EventCard extends StatelessWidget {
                   maxPlayers: maxPlayers,
                   tag1: tag1,
                   tag2: tag2,
+                  private: private,
                 ),
               ),
             );
@@ -68,6 +71,7 @@ class EventCard extends StatelessWidget {
                   game: game,
                   tag1: tag1,
                   tag2: tag2,
+                  private: private,
                 ),
               ),
             );

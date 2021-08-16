@@ -17,6 +17,7 @@ class EventScreenDone extends StatefulWidget {
     required this.maxPlayers,
     required this.tag1,
     required this.tag2,
+    this.private = false,
   });
 
   final String eventName;
@@ -29,6 +30,7 @@ class EventScreenDone extends StatefulWidget {
   final String maxPlayers;
   final String tag1;
   final String tag2;
+  final bool private;
 
   @override
   _EventScreenDoneState createState() => _EventScreenDoneState();
@@ -250,6 +252,13 @@ class _EventScreenDoneState extends State<EventScreenDone> {
                     EventTag(
                       tagName: widget.tag2,
                     ),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    if(widget.private)
+                       EventTag(
+                      tagName: "Privado"
+                    )
                   ],
                 ),
               ),

@@ -15,7 +15,8 @@ class EventScreen extends StatefulWidget {
       required this.playerCount,
       required this.tag1,
       required this.tag2,
-      required this.eventTime});
+      required this.eventTime,
+      this.private = false});
 
   final String eventName;
   final String game;
@@ -25,6 +26,7 @@ class EventScreen extends StatefulWidget {
   final String imageUrl;
   final String tag1;
   final String tag2;
+  final bool private;
   @override
   _EventScreenState createState() => _EventScreenState();
 }
@@ -56,6 +58,13 @@ class _EventScreenState extends State<EventScreen> {
                     EventTag(
                       tagName: widget.tag2,
                     ),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    if(widget.private)
+                       EventTag(
+                      tagName: "Privado"
+                    )
                   ],
                 ),
               ),

@@ -8,15 +8,17 @@ import 'home_screen.dart';
 
 class EventScreenCreated extends StatefulWidget {
   static String id = 'event_screen';
-  EventScreenCreated(
-      {required this.heroTag,
-      required this.imageUrl,
-      required this.eventName,
-      required this.game,
-      required this.playerCount,
-      required this.tag1,
-      required this.tag2,
-      required this.eventTime});
+  EventScreenCreated({
+    required this.heroTag,
+    required this.imageUrl,
+    required this.eventName,
+    required this.game,
+    required this.playerCount,
+    required this.tag1,
+    required this.tag2,
+    required this.eventTime,
+    this.private = false,
+  });
 
   final String eventName;
   final String game;
@@ -26,6 +28,7 @@ class EventScreenCreated extends StatefulWidget {
   final String imageUrl;
   final String tag1;
   final String tag2;
+  final bool private;
 
   @override
   _EventScreenCreatedState createState() => _EventScreenCreatedState();
@@ -58,6 +61,13 @@ class _EventScreenCreatedState extends State<EventScreenCreated> {
                     EventTag(
                       tagName: widget.tag2,
                     ),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    if(widget.private)
+                       EventTag(
+                      tagName: "Privado"
+                    )
                   ],
                 ),
               ),
