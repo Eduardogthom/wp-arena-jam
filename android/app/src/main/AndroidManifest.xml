@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.wp_arena">
+    package="com.example.wp_arena_flutter">
    <application
         android:label="wp_arena_herojam"
         android:icon="@mipmap/ic_launcher">
