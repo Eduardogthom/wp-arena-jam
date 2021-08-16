@@ -41,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           textAlign: TextAlign.center,
                           text: TextSpan(
                               text:
-                                  "Frase de efeito muito daora aqui de até 3 linhas",
+                                  "Agende e compartilhe jogos online",
                               style: TextStyle(
                                 fontSize: 32.0,
                                 fontWeight: FontWeight.w600,

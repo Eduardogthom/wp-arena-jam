@@ -5,6 +5,7 @@ const kGray = Color(0xFFC4C4C4);
 const kBlack = Color(0xFF18181C);
 const kWhite = Color(0xFFFFFFFF);
 const kCrimson = Color(0xffDC143C);
+const kGrayAlt = Color(0xFF3C3C44);
 
 // Logo colors
 const kBlue = Color(0xFF00E1FF);

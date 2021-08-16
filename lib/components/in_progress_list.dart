@@ -48,6 +48,8 @@ class InProgressGames extends StatelessWidget {
                 eventTime: '19:30',
                 imageUrl: 'images/games/lol.jpg',
                 heroTag: getRandomString(5),
+                totalPlayers: "3",
+                maxPlayers: "5",
               ),
               EventCard(
                 eventName: 'Minezinho com a galera',
@@ -56,6 +58,8 @@ class InProgressGames extends StatelessWidget {
                 eventTime: '13:30',
                 imageUrl: 'images/games/minecraft.jpg',
                 heroTag: getRandomString(5),
+                totalPlayers: "15",
+                maxPlayers: "15",
               ),
               EventCard(
                 eventName: 'Mix CS: GO',
@@ -64,6 +68,8 @@ class InProgressGames extends StatelessWidget {
                 eventTime: '13:30',
                 imageUrl: 'images/games/csgo.jpg',
                 heroTag: getRandomString(5),
+                totalPlayers: "5",
+                maxPlayers: "5",
               ),
               SizedBox(
                 height: 30.0,
@@ -91,6 +97,8 @@ class InProgressGames extends StatelessWidget {
                 eventTime: '19:30',
                 imageUrl: 'images/games/fortnite.jpg',
                 heroTag: getRandomString(5),
+                totalPlayers: "3",
+                maxPlayers: "5",
               ),
               EventCard(
                 eventName: 'Grind de Wowzinho',
@@ -99,6 +107,8 @@ class InProgressGames extends StatelessWidget {
                 eventTime: '13:30',
                 imageUrl: 'images/games/wow.jpg',
                 heroTag: getRandomString(5),
+                totalPlayers: "15",
+                maxPlayers: "15",
               ),
               EventCard(
                 eventName: 'Ludo alucinante',
@@ -107,6 +117,8 @@ class InProgressGames extends StatelessWidget {
                 eventTime: '13:30',
                 imageUrl: 'images/games/ludo.jpg',
                 heroTag: getRandomString(5),
+                totalPlayers: "5",
+                maxPlayers: "5",
               ),
               SizedBox(
                 height: 30.0,
@@ -134,6 +146,8 @@ class InProgressGames extends StatelessWidget {
                 eventTime: '19:30',
                 imageUrl: 'images/games/pes.jpg',
                 heroTag: getRandomString(5),
+                totalPlayers: "3",
+                maxPlayers: "5",
               ),
               EventCard(
                 eventName: 'Warzone da emoção',
@@ -142,6 +156,8 @@ class InProgressGames extends StatelessWidget {
                 eventTime: '13:30',
                 imageUrl: 'images/games/warzone.jpg',
                 heroTag: getRandomString(5),
+                totalPlayers: "15",
+                maxPlayers: "15",
               ),
               EventCard(
                 eventName: 'Futeba de carro',
@@ -150,6 +166,8 @@ class InProgressGames extends StatelessWidget {
                 eventTime: '13:30',
                 imageUrl: 'images/games/rocket_league.jpg',
                 heroTag: getRandomString(5),
+                totalPlayers: "5",
+                maxPlayers: "5",
               ),
               SizedBox(
                 height: 30.0,
@@ -177,6 +195,8 @@ class InProgressGames extends StatelessWidget {
                 eventTime: '19:30',
                 imageUrl: 'images/games/fifa.jpg',
                 heroTag: getRandomString(5),
+                totalPlayers: "3",
+                maxPlayers: "5",
               ),
               EventCard(
                 eventName: 'Paladins safado',
@@ -185,6 +205,8 @@ class InProgressGames extends StatelessWidget {
                 eventTime: '13:30',
                 imageUrl: 'images/games/paladins.jpg',
                 heroTag: getRandomString(5),
+                totalPlayers: "15",
+                maxPlayers: "15",
               ),
               EventCard(
                 eventName: 'Grind no Destiny',
@@ -193,6 +215,8 @@ class InProgressGames extends StatelessWidget {
                 eventTime: '13:30',
                 imageUrl: 'images/games/destiny_2.jpg',
                 heroTag: getRandomString(5),
+                totalPlayers: "5",
+                maxPlayers: "5",
               ),
             ],
           ),
