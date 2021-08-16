@@ -93,7 +93,7 @@ class _GradientBottomNavigationBarState
           BottomNavigationBarItem(
             icon: Icon(
               Icons.add_circle,
-              size: 72,
+              size: 68,
               color: widget.screenName == 'game' ? kBlue : kWhite,
             ),
             label: 'Add Game',
