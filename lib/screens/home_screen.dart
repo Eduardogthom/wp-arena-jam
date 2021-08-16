@@ -107,6 +107,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       bottomNavigationBar: GradientBottomNavigationBar(
         screenName: 'home',
+        userName: widget.userName,
       ),
     );
   }

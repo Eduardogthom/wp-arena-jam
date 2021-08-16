@@ -8,8 +8,9 @@ import 'package:wp_arena_flutter/components/submit_button.dart';
 import '../constants.dart';
 
 class ProfileScreen extends StatefulWidget {
-  const ProfileScreen({Key? key}) : super(key: key);
+  const ProfileScreen({Key? key, required this.userName}) : super(key: key);
   static String id = 'profile_screen';
+  final String userName;
   @override
   _ProfileScreenState createState() => _ProfileScreenState();
 }
@@ -236,7 +237,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 child: SubmitButton(
                                   formKey: _formKey,
                                   labelText: 'SALVAR',
-                                  userName: '',
+                                  userName: widget.userName,
                                 )),
                           ],
                         ),
@@ -254,6 +255,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       ),
       bottomNavigationBar: GradientBottomNavigationBar(
         screenName: 'profile',
+        userName: widget.userName,
       ),
     );
   }

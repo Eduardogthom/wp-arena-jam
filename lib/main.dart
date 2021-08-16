@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wp_arena_flutter/screens/event_screen%20done.dart';
-import 'package:wp_arena_flutter/screens/event_screen.dart';
-import 'package:wp_arena_flutter/screens/game_screen.dart';
 import 'package:wp_arena_flutter/screens/login_screen.dart';
-import 'package:wp_arena_flutter/screens/profile_screen.dart';
 import 'package:wp_arena_flutter/screens/schedule_match_screen.dart';
 import 'package:wp_arena_flutter/screens/sign_in_screen.dart';
 
@@ -21,9 +17,9 @@ class WPArena extends StatelessWidget {
       routes: {
         LoginScreen.id: (context) => LoginScreen(),
         SignInScreen.id: (context) => SignInScreen(),
-        ProfileScreen.id: (context) => ProfileScreen(),
+        //ProfileScreen.id: (context) => ProfileScreen(),
         ScheduleMatchScreen.id: (context) => ScheduleMatchScreen(),
-        GameScreen.id: (context) => GameScreen(),
+        // GameScreen.id: (context) => GameScreen(),
       
       },
     );
