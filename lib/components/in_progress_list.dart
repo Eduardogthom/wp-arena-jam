@@ -53,7 +53,7 @@ class InProgressGames extends StatelessWidget {
                 tag1: 'MOBA',
                 tag2: 'ONLINE',
                 rule1: 'Somente acima de Plat IV',
-                rule2: 'Somente jogadores com 5 estrelas se desempenho ',
+                rule2: 'Somente jogadores com 5 estrelas de desempenho ',
                 rule3: 'Somente jogadores de 20 a 29 anos',
                 private: true,
               ),
