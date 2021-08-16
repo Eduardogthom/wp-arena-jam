@@ -12,6 +12,7 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   final _formKey = GlobalKey<FormState>();
+  final nameController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,6 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         SizedBox(height: 20.0),
                         Container(
                           child: TextFormField(
+                            controller: nameController,
                             style: TextStyle(
                               color: kWhite,
                               fontFamily: 'Montserrat',
@@ -163,7 +165,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     context,
                                     MaterialPageRoute(
                                       builder: (context) => HomeScreen(
-                                        userName: 'Oie',
+                                        userName: nameController.text,
                                       ),
                                     ),
                                   ),

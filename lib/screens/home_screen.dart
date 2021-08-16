@@ -43,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               text: 'Olá, ',
                             ),
                             new TextSpan(
-                              text: 'Eduardo',
+                              text: widget.userName,
                               style: new TextStyle(fontWeight: FontWeight.bold),
                             ),
                           ],

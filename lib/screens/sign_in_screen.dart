@@ -14,7 +14,7 @@ class SignInScreen extends StatefulWidget {
 
 class _SignInScreenState extends State<SignInScreen> {
   final _formKey = GlobalKey<FormState>();
-
+  final nameController = TextEditingController();
   String _selectedGender = 'Selecione seu gênero';
 
   @override
@@ -55,6 +55,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   hintText: 'Email',
                   errorMessage: 'Por favor, digite seu email.',
                   prefixIcon: Icons.email,
+                  nameController: nameController,
                 ),
                 SizedBox(
                   height: 16,
@@ -95,6 +96,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   child: SubmitButton(
                     formKey: _formKey,
                     labelText: 'CADASTRAR',
+                    userName: nameController.text,
                   ),
                 ),
               ],

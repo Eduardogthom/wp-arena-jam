@@ -208,38 +208,39 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         height: 15.0,
                       ),
                       Form(
-                          key: _formKey,
-                          child: Column(
-                            children: [
-                              Input(
-                                enabled: true,
-                                hintText: 'Senha',
-                                errorMessage:
-                                    'Por favor, digite sua nova senha.',
-                                prefixIcon: Icons.lock,
-                              ),
-                              SizedBox(
-                                height: 15.0,
-                              ),
-                              Input(
-                                enabled: true,
-                                hintText: 'Confirmar senha',
-                                errorMessage:
-                                    'Por favor, confirme sua nova senha.',
-                                prefixIcon: Icons.lock,
-                              ),
-                              SizedBox(
-                                height: 15.0,
-                              ),
-                              Container(
-                                  height: 50.0,
-                                  width: 450.0,
-                                  child: SubmitButton(
-                                    formKey: _formKey,
-                                    labelText: 'SALVAR',
-                                  )),
-                            ],
-                          ))
+                        key: _formKey,
+                        child: Column(
+                          children: [
+                            Input(
+                              enabled: true,
+                              hintText: 'Senha',
+                              errorMessage: 'Por favor, digite sua nova senha.',
+                              prefixIcon: Icons.lock,
+                            ),
+                            SizedBox(
+                              height: 15.0,
+                            ),
+                            Input(
+                              enabled: true,
+                              hintText: 'Confirmar senha',
+                              errorMessage:
+                                  'Por favor, confirme sua nova senha.',
+                              prefixIcon: Icons.lock,
+                            ),
+                            SizedBox(
+                              height: 15.0,
+                            ),
+                            Container(
+                                height: 50.0,
+                                width: 450.0,
+                                child: SubmitButton(
+                                  formKey: _formKey,
+                                  labelText: 'SALVAR',
+                                  userName: '',
+                                )),
+                          ],
+                        ),
+                      )
                     ],
                   ),
                 ),

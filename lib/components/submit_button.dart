@@ -7,12 +7,14 @@ class SubmitButton extends StatelessWidget {
       {Key? key,
       required this.formKey,
       this.buttonColor,
+      required this.userName,
       required this.labelText})
       : super(key: key);
 
   final GlobalKey<FormState> formKey;
   final Color? buttonColor;
   final String labelText;
+  final String userName;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +29,7 @@ class SubmitButton extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => HomeScreen(
-                    userName: 'Oie',
+                    userName: userName,
                   ),
                 ),
               ),

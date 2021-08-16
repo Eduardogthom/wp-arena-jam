@@ -72,6 +72,7 @@ class _GameScreenState extends State<GameScreen> {
               Expanded(
                 child: GridView.count(
                   crossAxisCount: 3,
+                  childAspectRatio: 3 / 4,
                   children: [
                     Column(
                       children: [
@@ -84,6 +85,7 @@ class _GameScreenState extends State<GameScreen> {
                           child: Text(
                             'Call of Duty',
                             style: kSubTextStyle,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -100,6 +102,7 @@ class _GameScreenState extends State<GameScreen> {
                           child: Text(
                             'Battlefield 2042',
                             style: kSubTextStyle,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -115,6 +118,7 @@ class _GameScreenState extends State<GameScreen> {
                           child: Text(
                             'Counter Strike Global Offensive',
                             style: kSubTextStyle,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -131,6 +135,7 @@ class _GameScreenState extends State<GameScreen> {
                           child: Text(
                             'Dark Souls 3',
                             style: kSubTextStyle,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -147,6 +152,7 @@ class _GameScreenState extends State<GameScreen> {
                           child: Text(
                             'Destiny 2',
                             style: kSubTextStyle,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -162,6 +168,7 @@ class _GameScreenState extends State<GameScreen> {
                           child: Text(
                             'Fifa',
                             style: kSubTextStyle,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -178,6 +185,7 @@ class _GameScreenState extends State<GameScreen> {
                           child: Text(
                             'Five Nights of Freddys',
                             style: kSubTextStyle,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -194,6 +202,7 @@ class _GameScreenState extends State<GameScreen> {
                           child: Text(
                             'Forsaken World',
                             style: kSubTextStyle,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -210,6 +219,7 @@ class _GameScreenState extends State<GameScreen> {
                           child: Text(
                             'Fornite',
                             style: kSubTextStyle,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -226,6 +236,7 @@ class _GameScreenState extends State<GameScreen> {
                           child: Text(
                             'Genshin Impact',
                             style: kSubTextStyle,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -241,6 +252,7 @@ class _GameScreenState extends State<GameScreen> {
                           child: Text(
                             'Heroes of the Storm',
                             style: kSubTextStyle,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -256,6 +268,7 @@ class _GameScreenState extends State<GameScreen> {
                           child: Text(
                             'Left 4 Dead 2',
                             style: kSubTextStyle,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -271,6 +284,7 @@ class _GameScreenState extends State<GameScreen> {
                           child: Text(
                             'League of Legends',
                             style: kSubTextStyle,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -286,6 +300,7 @@ class _GameScreenState extends State<GameScreen> {
                           child: Text(
                             'Ludo',
                             style: kSubTextStyle,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -302,6 +317,7 @@ class _GameScreenState extends State<GameScreen> {
                           child: Text(
                             'Minecraft',
                             style: kSubTextStyle,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -318,6 +334,7 @@ class _GameScreenState extends State<GameScreen> {
                           child: Text(
                             'Monster Hunter World',
                             style: kSubTextStyle,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -334,6 +351,7 @@ class _GameScreenState extends State<GameScreen> {
                           child: Text(
                             'New World',
                             style: kSubTextStyle,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -350,6 +368,7 @@ class _GameScreenState extends State<GameScreen> {
                           child: Text(
                             'Overwatch',
                             style: kSubTextStyle,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -366,6 +385,7 @@ class _GameScreenState extends State<GameScreen> {
                           child: Text(
                             'Paladins',
                             style: kSubTextStyle,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -381,6 +401,7 @@ class _GameScreenState extends State<GameScreen> {
                           child: Text(
                             'PES 2021',
                             style: kSubTextStyle,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -397,6 +418,7 @@ class _GameScreenState extends State<GameScreen> {
                           child: Text(
                             'Pokémon GO',
                             style: kSubTextStyle,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -412,6 +434,7 @@ class _GameScreenState extends State<GameScreen> {
                           child: Text(
                             'PUBG',
                             style: kSubTextStyle,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -428,6 +451,7 @@ class _GameScreenState extends State<GameScreen> {
                           child: Text(
                             'Roblox',
                             style: kSubTextStyle,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -444,6 +468,7 @@ class _GameScreenState extends State<GameScreen> {
                           child: Text(
                             'Rocket League',
                             style: kSubTextStyle,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -460,6 +485,7 @@ class _GameScreenState extends State<GameScreen> {
                           child: Text(
                             'Runescape',
                             style: kSubTextStyle,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -475,6 +501,7 @@ class _GameScreenState extends State<GameScreen> {
                           child: Text(
                             'TeamFight Tactics',
                             style: kSubTextStyle,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -491,6 +518,7 @@ class _GameScreenState extends State<GameScreen> {
                           child: Text(
                             'The Ants',
                             style: kSubTextStyle,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -507,6 +535,7 @@ class _GameScreenState extends State<GameScreen> {
                           child: Text(
                             'COD: Warzone',
                             style: kSubTextStyle,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -522,6 +551,7 @@ class _GameScreenState extends State<GameScreen> {
                           child: Text(
                             'World of Warcraft',
                             style: kSubTextStyle,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
