@@ -58,6 +58,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   errorMessage: 'Por favor, digite seu email.',
                   prefixIcon: Icons.email,
                   nameController: nameController,
+                  hiddenText: false,
                 ),
                 SizedBox(
                   height: 16,
@@ -67,6 +68,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   hintText: 'Data de nascimento',
                   errorMessage: 'Por favor, digite sua data de nascimento.',
                   prefixIcon: Icons.calendar_today,
+                  hiddenText: false,
                 ),
                 SizedBox(
                   height: 16,
@@ -76,6 +78,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   hintText: 'Senha',
                   errorMessage: 'Por favor, digite sua senha.',
                   prefixIcon: Icons.lock,
+                  hiddenText: true,
                 ),
                 SizedBox(
                   height: 16,

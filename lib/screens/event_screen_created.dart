@@ -359,6 +359,7 @@ class _EventScreenCreatedState extends State<EventScreenCreated> {
                           errorMessage:
                               'Por favor, digite o seu nome do usuário',
                           prefixIcon: Icons.person,
+                          hiddenText: false,
                         ),
                       ),
                     ),

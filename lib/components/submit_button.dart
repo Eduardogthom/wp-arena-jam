@@ -32,7 +32,7 @@ class SubmitButton extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => HomeScreen(
-                    userName: userName,
+                    userName: 'Player1154',
                   ),
                 ),
               ),
