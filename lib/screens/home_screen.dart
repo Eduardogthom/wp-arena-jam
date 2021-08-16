@@ -1,7 +1,4 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:wp_arena_flutter/components/event_card.dart';
 import 'package:wp_arena_flutter/components/gradient_bottom_navigator.dart';
 import 'package:wp_arena_flutter/components/history_list.dart';
 import 'package:wp_arena_flutter/components/in_progress_list.dart';
@@ -46,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               text: 'Olá, ',
                             ),
                             new TextSpan(
-                              text: 'Eduardo',
+                              text: widget.userName,
                               style: new TextStyle(fontWeight: FontWeight.bold),
                             ),
                           ],
@@ -110,6 +107,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       bottomNavigationBar: GradientBottomNavigationBar(
         screenName: 'home',
+        userName: widget.userName,
       ),
     );
   }

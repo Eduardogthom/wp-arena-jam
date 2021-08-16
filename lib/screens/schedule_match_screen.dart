@@ -115,6 +115,7 @@ class _ScheduleMatchScreenState extends State<ScheduleMatchScreen> {
                 Padding(
                   padding: EdgeInsets.symmetric(vertical: 20),
                   child: SubmitButton(
+                    userName: '',
                     formKey: _formKey,
                     labelText: 'CADASTRAR',
                   ),

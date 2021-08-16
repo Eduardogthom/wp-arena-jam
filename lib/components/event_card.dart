@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wp_arena_flutter/screens/event_screen%20done.dart';
 import 'package:wp_arena_flutter/screens/event_screen.dart';
 
 import '../constants.dart';
@@ -11,6 +12,9 @@ class EventCard extends StatelessWidget {
     required this.eventTime,
     required this.imageUrl,
     required this.heroTag,
+    required this.totalPlayers,
+    required this.maxPlayers,
+    this.done = false,
   });
 
   final String eventName;
@@ -19,6 +23,9 @@ class EventCard extends StatelessWidget {
   final String eventTime;
   final String imageUrl;
   final String heroTag;
+  final String totalPlayers;
+  final String maxPlayers;
+  final bool done;
 
   @override
   Widget build(BuildContext context) {
@@ -26,19 +33,38 @@ class EventCard extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 10),
       child: InkWell(
         onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => EventScreen(
-                heroTag: heroTag,
-                imageUrl: imageUrl,
-                eventName: eventName,
-                eventTime: eventTime,
-                playerCount: playerCount,
-                game: game,
+          if (this.done) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => EventScreenDone(
+                  heroTag: heroTag,
+                  imageUrl: imageUrl,
+                  eventName: eventName,
+                  eventTime: eventTime,
+                  playerCount: playerCount,
+                  game: game,
+                  totalPlayers: totalPlayers,
+                  maxPlayers: maxPlayers,
+                ),
               ),
-            ),
-          );
+            );
+          } else {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => EventScreen(
+                  heroTag: heroTag,
+                  imageUrl: imageUrl,
+                  eventName: eventName,
+                  eventTime: eventTime,
+                  playerCount: playerCount,
+                  game: game,
+                  
+                ),
+              ),
+            );
+          }
         },
         child: Card(
           color: kGray,

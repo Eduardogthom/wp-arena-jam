@@ -48,6 +48,9 @@ class GamesHistory extends StatelessWidget {
                 eventTime: '19:30',
                 imageUrl: 'images/games/lol.jpg',
                 heroTag: getRandomString(5),
+                done:true,
+                totalPlayers: "3",
+                maxPlayers: "5",
               ),
               EventCard(
                 eventName: 'Partida com os cria',
@@ -56,6 +59,9 @@ class GamesHistory extends StatelessWidget {
                 eventTime: '19:30',
                 imageUrl: 'images/games/lol.jpg',
                 heroTag: getRandomString(5),
+                done:true,
+                totalPlayers: "3",
+                maxPlayers: "5",
               ),
               SizedBox(
                 height: 30.0,
@@ -83,6 +89,8 @@ class GamesHistory extends StatelessWidget {
                 eventTime: '19:30',
                 imageUrl: 'images/games/fortnite.jpg',
                 heroTag: getRandomString(5),
+                totalPlayers: "3",
+                maxPlayers: "5",
               ),
               SizedBox(
                 height: 30.0,
@@ -110,6 +118,8 @@ class GamesHistory extends StatelessWidget {
                 eventTime: '19:30',
                 imageUrl: 'images/games/tft.jpg',
                 heroTag: getRandomString(5),
+                totalPlayers: "3",
+                maxPlayers: "5",
               ),
               EventCard(
                 eventName: 'X1 no futeba',
@@ -118,6 +128,8 @@ class GamesHistory extends StatelessWidget {
                 eventTime: '19:30',
                 imageUrl: 'images/games/tft.jpg',
                 heroTag: getRandomString(5),
+                totalPlayers: "3",
+                maxPlayers: "5",
               ),
               EventCard(
                 eventName: 'Futeba de carro',
@@ -126,6 +138,8 @@ class GamesHistory extends StatelessWidget {
                 eventTime: '13:30',
                 imageUrl: 'images/games/rocket_league.jpg',
                 heroTag: getRandomString(5),
+                totalPlayers: "3",
+                maxPlayers: "5",
               ),
             ],
           ),

@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:wp_arena_flutter/components/avatar_button.dart';
 import 'package:wp_arena_flutter/components/dropdown.dart';
+import 'package:wp_arena_flutter/components/gradient_bottom_navigator.dart';
 import 'package:wp_arena_flutter/components/input.dart';
 import 'package:wp_arena_flutter/components/submit_button.dart';
 
 import '../constants.dart';
 
 class ProfileScreen extends StatefulWidget {
-  const ProfileScreen({Key? key}) : super(key: key);
+  const ProfileScreen({Key? key, required this.userName}) : super(key: key);
   static String id = 'profile_screen';
+  final String userName;
   @override
   _ProfileScreenState createState() => _ProfileScreenState();
 }
@@ -207,38 +209,39 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         height: 15.0,
                       ),
                       Form(
-                          key: _formKey,
-                          child: Column(
-                            children: [
-                              Input(
-                                enabled: true,
-                                hintText: 'Senha',
-                                errorMessage:
-                                    'Por favor, digite sua nova senha.',
-                                prefixIcon: Icons.lock,
-                              ),
-                              SizedBox(
-                                height: 15.0,
-                              ),
-                              Input(
-                                enabled: true,
-                                hintText: 'Confirmar senha',
-                                errorMessage:
-                                    'Por favor, confirme sua nova senha.',
-                                prefixIcon: Icons.lock,
-                              ),
-                              SizedBox(
-                                height: 15.0,
-                              ),
-                              Container(
-                                  height: 50.0,
-                                  width: 450.0,
-                                  child: SubmitButton(
-                                    formKey: _formKey,
-                                    labelText: 'SALVAR',
-                                  )),
-                            ],
-                          ))
+                        key: _formKey,
+                        child: Column(
+                          children: [
+                            Input(
+                              enabled: true,
+                              hintText: 'Senha',
+                              errorMessage: 'Por favor, digite sua nova senha.',
+                              prefixIcon: Icons.lock,
+                            ),
+                            SizedBox(
+                              height: 15.0,
+                            ),
+                            Input(
+                              enabled: true,
+                              hintText: 'Confirmar senha',
+                              errorMessage:
+                                  'Por favor, confirme sua nova senha.',
+                              prefixIcon: Icons.lock,
+                            ),
+                            SizedBox(
+                              height: 15.0,
+                            ),
+                            Container(
+                                height: 50.0,
+                                width: 450.0,
+                                child: SubmitButton(
+                                  formKey: _formKey,
+                                  labelText: 'SALVAR',
+                                  userName: widget.userName,
+                                )),
+                          ],
+                        ),
+                      )
                     ],
                   ),
                 ),
@@ -249,6 +252,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: GradientBottomNavigationBar(
+        screenName: 'profile',
+        userName: widget.userName,
       ),
     );
   }

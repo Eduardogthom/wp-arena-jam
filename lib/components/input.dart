@@ -7,6 +7,7 @@ class Input extends StatelessWidget {
     required this.hintText,
     required this.errorMessage,
     required this.enabled,
+    this.nameController,
     this.maxLines,
     this.prefixIcon,
   }) : super(key: key);
@@ -16,10 +17,12 @@ class Input extends StatelessWidget {
   final IconData? prefixIcon;
   final bool enabled;
   final int? maxLines;
+  final TextEditingController? nameController;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: nameController,
       maxLines: maxLines ?? 1,
       enabled: enabled,
       style: TextStyle(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wp_arena_flutter/constants.dart';
 import 'package:wp_arena_flutter/screens/home_screen.dart';
+import 'package:wp_arena_flutter/screens/sign_in_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -11,6 +12,7 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   final _formKey = GlobalKey<FormState>();
+  final nameController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           textAlign: TextAlign.center,
                           text: TextSpan(
                               text:
-                                  "Frase de efeito muito daora aqui de até 3 linhas",
+                                  "Agende e compartilhe jogos online",
                               style: TextStyle(
                                 fontSize: 32.0,
                                 fontWeight: FontWeight.w600,
@@ -50,6 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         SizedBox(height: 20.0),
                         Container(
                           child: TextFormField(
+                            controller: nameController,
                             style: TextStyle(
                               color: kWhite,
                               fontFamily: 'Montserrat',
@@ -162,7 +165,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     context,
                                     MaterialPageRoute(
                                       builder: (context) => HomeScreen(
-                                        userName: 'Oie',
+                                        userName: nameController.text,
                                       ),
                                     ),
                                   ),
@@ -227,7 +230,14 @@ class _LoginScreenState extends State<LoginScreen> {
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Montserrat',
                             )),
-                        onPressed: () => {},
+                        onPressed: () => {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SignInScreen(),
+                            ),
+                          ),
+                        },
                       )
                     ],
                   ),
