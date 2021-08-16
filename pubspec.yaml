@@ -46,5 +46,5 @@ flutter_native_splash:
   image: images/splash.png
   android: true
   ios: true
-  android_gravity: center
-  ios_content_mode: center
+  android_gravity: fill
+  ios_content_mode: scaleAspectFit
