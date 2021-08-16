@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wp_arena_flutter/screens/event_screen%20done.dart';
+import 'package:wp_arena_flutter/screens/event_screen_done.dart';
 import 'package:wp_arena_flutter/screens/event_screen.dart';
 
 import '../constants.dart';
@@ -60,7 +60,6 @@ class EventCard extends StatelessWidget {
                   eventTime: eventTime,
                   playerCount: playerCount,
                   game: game,
-                  
                 ),
               ),
             );

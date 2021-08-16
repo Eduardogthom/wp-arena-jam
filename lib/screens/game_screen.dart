@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:wp_arena_flutter/components/gradient_bottom_navigator.dart';
+import 'package:wp_arena_flutter/components/input.dart';
 import 'package:wp_arena_flutter/constants.dart';
+import 'package:wp_arena_flutter/screens/event_game_screen.dart';
 //import 'package:wp_arena_flutter/components/gradient_bottom_navigator.dart';
 
 class GameScreen extends StatefulWidget {
@@ -62,9 +64,11 @@ class _GameScreenState extends State<GameScreen> {
                 height: 20.0,
               ),
               //Buscador
-              CupertinoSearchTextField(
-                backgroundColor: kGray,
-                placeholder: 'Buscar jogo',
+              Input(
+                enabled: true,
+                hintText: 'Buscar jogo',
+                errorMessage: 'Por favor, digite o seu nome do usuário',
+                prefixIcon: Icons.search,
               ),
               SizedBox(
                 height: 20.0,
@@ -82,7 +86,21 @@ class _GameScreenState extends State<GameScreen> {
                           radius: 40.0,
                         ),
                         TextButton(
-                          onPressed: () => {},
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventGame(
+                                  userName: widget.userName,
+                                  eventName: 'Partida com os cria',
+                                  game: 'Call of Duty',
+                                  playerCount: '4',
+                                  eventTime: '13:30',
+                                  imageUrl: 'images/games/cod.jfif',
+                                ),
+                              ),
+                            ),
+                          },
                           child: Text(
                             'Call of Duty',
                             style: kSubTextStyle,
@@ -99,7 +117,21 @@ class _GameScreenState extends State<GameScreen> {
                           radius: 40.0,
                         ),
                         TextButton(
-                          onPressed: () => {},
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventGame(
+                                  userName: widget.userName,
+                                  eventName: 'Partida com os cria',
+                                  game: 'Call of Duty',
+                                  playerCount: '4',
+                                  eventTime: '13:30',
+                                  imageUrl: 'images/games/battlefield.jpg',
+                                ),
+                              ),
+                            ),
+                          },
                           child: Text(
                             'Battlefield 2042',
                             style: kSubTextStyle,
@@ -115,7 +147,21 @@ class _GameScreenState extends State<GameScreen> {
                           radius: 40.0,
                         ),
                         TextButton(
-                          onPressed: () => {},
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventGame(
+                                  userName: widget.userName,
+                                  eventName: 'Partida com os cria',
+                                  game: 'Call of Duty',
+                                  playerCount: '4',
+                                  eventTime: '13:30',
+                                  imageUrl: 'images/games/csgo.jpg',
+                                ),
+                              ),
+                            ),
+                          },
                           child: Text(
                             'Counter Strike Global Offensive',
                             style: kSubTextStyle,
@@ -132,7 +178,21 @@ class _GameScreenState extends State<GameScreen> {
                           radius: 40.0,
                         ),
                         TextButton(
-                          onPressed: () => {},
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventGame(
+                                  userName: widget.userName,
+                                  eventName: 'Partida com os cria',
+                                  game: 'Call of Duty',
+                                  playerCount: '4',
+                                  eventTime: '13:30',
+                                  imageUrl: 'images/games/dark_souls_3.jpg',
+                                ),
+                              ),
+                            ),
+                          },
                           child: Text(
                             'Dark Souls 3',
                             style: kSubTextStyle,
@@ -149,7 +209,21 @@ class _GameScreenState extends State<GameScreen> {
                           radius: 40.0,
                         ),
                         TextButton(
-                          onPressed: () => {},
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventGame(
+                                  userName: widget.userName,
+                                  eventName: 'Partida com os cria',
+                                  game: 'Call of Duty',
+                                  playerCount: '4',
+                                  eventTime: '13:30',
+                                  imageUrl: 'images/games/destiny_2.jpg',
+                                ),
+                              ),
+                            ),
+                          },
                           child: Text(
                             'Destiny 2',
                             style: kSubTextStyle,
@@ -165,7 +239,21 @@ class _GameScreenState extends State<GameScreen> {
                           radius: 40.0,
                         ),
                         TextButton(
-                          onPressed: () => {},
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventGame(
+                                  userName: widget.userName,
+                                  eventName: 'Partida com os cria',
+                                  game: 'Call of Duty',
+                                  playerCount: '4',
+                                  eventTime: '13:30',
+                                  imageUrl: 'images/games/fifa.jpg',
+                                ),
+                              ),
+                            ),
+                          },
                           child: Text(
                             'Fifa',
                             style: kSubTextStyle,
@@ -182,7 +270,21 @@ class _GameScreenState extends State<GameScreen> {
                           radius: 40.0,
                         ),
                         TextButton(
-                          onPressed: () => {},
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventGame(
+                                  userName: widget.userName,
+                                  eventName: 'Partida com os cria',
+                                  game: 'Call of Duty',
+                                  playerCount: '4',
+                                  eventTime: '13:30',
+                                  imageUrl: 'images/games/five_nights.jpg',
+                                ),
+                              ),
+                            ),
+                          },
                           child: Text(
                             'Five Nights of Freddys',
                             style: kSubTextStyle,
@@ -199,7 +301,21 @@ class _GameScreenState extends State<GameScreen> {
                           radius: 40.0,
                         ),
                         TextButton(
-                          onPressed: () => {},
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventGame(
+                                  userName: widget.userName,
+                                  eventName: 'Partida com os cria',
+                                  game: 'Call of Duty',
+                                  playerCount: '4',
+                                  eventTime: '13:30',
+                                  imageUrl: 'images/games/forsaken_world.png',
+                                ),
+                              ),
+                            ),
+                          },
                           child: Text(
                             'Forsaken World',
                             style: kSubTextStyle,
@@ -216,7 +332,21 @@ class _GameScreenState extends State<GameScreen> {
                           radius: 40.0,
                         ),
                         TextButton(
-                          onPressed: () => {},
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventGame(
+                                  userName: widget.userName,
+                                  eventName: 'Partida com os cria',
+                                  game: 'Call of Duty',
+                                  playerCount: '4',
+                                  eventTime: '13:30',
+                                  imageUrl: 'images/games/fortnite.jpg',
+                                ),
+                              ),
+                            ),
+                          },
                           child: Text(
                             'Fornite',
                             style: kSubTextStyle,
@@ -233,7 +363,21 @@ class _GameScreenState extends State<GameScreen> {
                           radius: 40.0,
                         ),
                         TextButton(
-                          onPressed: () => {},
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventGame(
+                                  userName: widget.userName,
+                                  eventName: 'Partida com os cria',
+                                  game: 'Call of Duty',
+                                  playerCount: '4',
+                                  eventTime: '13:30',
+                                  imageUrl: 'images/games/genshin_Impact.jpg',
+                                ),
+                              ),
+                            ),
+                          },
                           child: Text(
                             'Genshin Impact',
                             style: kSubTextStyle,
@@ -249,7 +393,21 @@ class _GameScreenState extends State<GameScreen> {
                           radius: 40.0,
                         ),
                         TextButton(
-                          onPressed: () => {},
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventGame(
+                                  userName: widget.userName,
+                                  eventName: 'Partida com os cria',
+                                  game: 'Call of Duty',
+                                  playerCount: '4',
+                                  eventTime: '13:30',
+                                  imageUrl: 'images/games/hos.jpg',
+                                ),
+                              ),
+                            ),
+                          },
                           child: Text(
                             'Heroes of the Storm',
                             style: kSubTextStyle,
@@ -265,7 +423,21 @@ class _GameScreenState extends State<GameScreen> {
                           radius: 40.0,
                         ),
                         TextButton(
-                          onPressed: () => {},
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventGame(
+                                  userName: widget.userName,
+                                  eventName: 'Partida com os cria',
+                                  game: 'Call of Duty',
+                                  playerCount: '4',
+                                  eventTime: '13:30',
+                                  imageUrl: 'images/games/l4d.jpg',
+                                ),
+                              ),
+                            ),
+                          },
                           child: Text(
                             'Left 4 Dead 2',
                             style: kSubTextStyle,
@@ -281,7 +453,21 @@ class _GameScreenState extends State<GameScreen> {
                           radius: 40.0,
                         ),
                         TextButton(
-                          onPressed: () => {},
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventGame(
+                                  userName: widget.userName,
+                                  eventName: 'Partida com os cria',
+                                  game: 'Call of Duty',
+                                  playerCount: '4',
+                                  eventTime: '13:30',
+                                  imageUrl: 'images/games/lol.jpg',
+                                ),
+                              ),
+                            ),
+                          },
                           child: Text(
                             'League of Legends',
                             style: kSubTextStyle,
@@ -297,7 +483,21 @@ class _GameScreenState extends State<GameScreen> {
                           radius: 40.0,
                         ),
                         TextButton(
-                          onPressed: () => {},
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventGame(
+                                  userName: widget.userName,
+                                  eventName: 'Partida com os cria',
+                                  game: 'Call of Duty',
+                                  playerCount: '4',
+                                  eventTime: '13:30',
+                                  imageUrl: 'images/games/ludo.jpg',
+                                ),
+                              ),
+                            ),
+                          },
                           child: Text(
                             'Ludo',
                             style: kSubTextStyle,
@@ -314,7 +514,21 @@ class _GameScreenState extends State<GameScreen> {
                           radius: 40.0,
                         ),
                         TextButton(
-                          onPressed: () => {},
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventGame(
+                                  userName: widget.userName,
+                                  eventName: 'Partida com os cria',
+                                  game: 'Call of Duty',
+                                  playerCount: '4',
+                                  eventTime: '13:30',
+                                  imageUrl: 'images/games/minecraft.jpg',
+                                ),
+                              ),
+                            ),
+                          },
                           child: Text(
                             'Minecraft',
                             style: kSubTextStyle,
@@ -331,7 +545,21 @@ class _GameScreenState extends State<GameScreen> {
                           radius: 40.0,
                         ),
                         TextButton(
-                          onPressed: () => {},
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventGame(
+                                  userName: widget.userName,
+                                  eventName: 'Partida com os cria',
+                                  game: 'Call of Duty',
+                                  playerCount: '4',
+                                  eventTime: '13:30',
+                                  imageUrl: 'images/games/monster_hunter.jpg',
+                                ),
+                              ),
+                            ),
+                          },
                           child: Text(
                             'Monster Hunter World',
                             style: kSubTextStyle,
@@ -348,7 +576,21 @@ class _GameScreenState extends State<GameScreen> {
                           radius: 40.0,
                         ),
                         TextButton(
-                          onPressed: () => {},
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventGame(
+                                  userName: widget.userName,
+                                  eventName: 'Partida com os cria',
+                                  game: 'Call of Duty',
+                                  playerCount: '4',
+                                  eventTime: '13:30',
+                                  imageUrl: 'images/games/new_world.jpg',
+                                ),
+                              ),
+                            ),
+                          },
                           child: Text(
                             'New World',
                             style: kSubTextStyle,
@@ -365,7 +607,21 @@ class _GameScreenState extends State<GameScreen> {
                           radius: 40.0,
                         ),
                         TextButton(
-                          onPressed: () => {},
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventGame(
+                                  userName: widget.userName,
+                                  eventName: 'Partida com os cria',
+                                  game: 'Call of Duty',
+                                  playerCount: '4',
+                                  eventTime: '13:30',
+                                  imageUrl: 'images/games/cod.jfif',
+                                ),
+                              ),
+                            ),
+                          },
                           child: Text(
                             'Overwatch',
                             style: kSubTextStyle,
@@ -382,7 +638,21 @@ class _GameScreenState extends State<GameScreen> {
                           radius: 40.0,
                         ),
                         TextButton(
-                          onPressed: () => {},
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventGame(
+                                  userName: widget.userName,
+                                  eventName: 'Partida com os cria',
+                                  game: 'Call of Duty',
+                                  playerCount: '4',
+                                  eventTime: '13:30',
+                                  imageUrl: 'images/games/cod.jfif',
+                                ),
+                              ),
+                            ),
+                          },
                           child: Text(
                             'Paladins',
                             style: kSubTextStyle,
@@ -398,7 +668,21 @@ class _GameScreenState extends State<GameScreen> {
                           radius: 40.0,
                         ),
                         TextButton(
-                          onPressed: () => {},
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventGame(
+                                  userName: widget.userName,
+                                  eventName: 'Partida com os cria',
+                                  game: 'Call of Duty',
+                                  playerCount: '4',
+                                  eventTime: '13:30',
+                                  imageUrl: 'images/games/cod.jfif',
+                                ),
+                              ),
+                            ),
+                          },
                           child: Text(
                             'PES 2021',
                             style: kSubTextStyle,
@@ -415,7 +699,21 @@ class _GameScreenState extends State<GameScreen> {
                           radius: 40.0,
                         ),
                         TextButton(
-                          onPressed: () => {},
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventGame(
+                                  userName: widget.userName,
+                                  eventName: 'Partida com os cria',
+                                  game: 'Call of Duty',
+                                  playerCount: '4',
+                                  eventTime: '13:30',
+                                  imageUrl: 'images/games/cod.jfif',
+                                ),
+                              ),
+                            ),
+                          },
                           child: Text(
                             'Pokémon GO',
                             style: kSubTextStyle,
@@ -431,7 +729,21 @@ class _GameScreenState extends State<GameScreen> {
                           radius: 40.0,
                         ),
                         TextButton(
-                          onPressed: () => {},
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventGame(
+                                  userName: widget.userName,
+                                  eventName: 'Partida com os cria',
+                                  game: 'Call of Duty',
+                                  playerCount: '4',
+                                  eventTime: '13:30',
+                                  imageUrl: 'images/games/cod.jfif',
+                                ),
+                              ),
+                            ),
+                          },
                           child: Text(
                             'PUBG',
                             style: kSubTextStyle,
@@ -448,7 +760,21 @@ class _GameScreenState extends State<GameScreen> {
                           radius: 40.0,
                         ),
                         TextButton(
-                          onPressed: () => {},
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventGame(
+                                  userName: widget.userName,
+                                  eventName: 'Partida com os cria',
+                                  game: 'Call of Duty',
+                                  playerCount: '4',
+                                  eventTime: '13:30',
+                                  imageUrl: 'images/games/cod.jfif',
+                                ),
+                              ),
+                            ),
+                          },
                           child: Text(
                             'Roblox',
                             style: kSubTextStyle,
@@ -465,7 +791,21 @@ class _GameScreenState extends State<GameScreen> {
                           radius: 40.0,
                         ),
                         TextButton(
-                          onPressed: () => {},
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventGame(
+                                  userName: widget.userName,
+                                  eventName: 'Partida com os cria',
+                                  game: 'Call of Duty',
+                                  playerCount: '4',
+                                  eventTime: '13:30',
+                                  imageUrl: 'images/games/cod.jfif',
+                                ),
+                              ),
+                            ),
+                          },
                           child: Text(
                             'Rocket League',
                             style: kSubTextStyle,
@@ -482,7 +822,21 @@ class _GameScreenState extends State<GameScreen> {
                           radius: 40.0,
                         ),
                         TextButton(
-                          onPressed: () => {},
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventGame(
+                                  userName: widget.userName,
+                                  eventName: 'Partida com os cria',
+                                  game: 'Call of Duty',
+                                  playerCount: '4',
+                                  eventTime: '13:30',
+                                  imageUrl: 'images/games/cod.jfif',
+                                ),
+                              ),
+                            ),
+                          },
                           child: Text(
                             'Runescape',
                             style: kSubTextStyle,
@@ -498,7 +852,21 @@ class _GameScreenState extends State<GameScreen> {
                           radius: 40.0,
                         ),
                         TextButton(
-                          onPressed: () => {},
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventGame(
+                                  userName: widget.userName,
+                                  eventName: 'Partida com os cria',
+                                  game: 'Call of Duty',
+                                  playerCount: '4',
+                                  eventTime: '13:30',
+                                  imageUrl: 'images/games/cod.jfif',
+                                ),
+                              ),
+                            ),
+                          },
                           child: Text(
                             'TeamFight Tactics',
                             style: kSubTextStyle,
@@ -515,7 +883,21 @@ class _GameScreenState extends State<GameScreen> {
                           radius: 40.0,
                         ),
                         TextButton(
-                          onPressed: () => {},
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventGame(
+                                  userName: widget.userName,
+                                  eventName: 'Partida com os cria',
+                                  game: 'Call of Duty',
+                                  playerCount: '4',
+                                  eventTime: '13:30',
+                                  imageUrl: 'images/games/cod.jfif',
+                                ),
+                              ),
+                            ),
+                          },
                           child: Text(
                             'The Ants',
                             style: kSubTextStyle,
@@ -532,7 +914,21 @@ class _GameScreenState extends State<GameScreen> {
                           radius: 40.0,
                         ),
                         TextButton(
-                          onPressed: () => {},
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventGame(
+                                  userName: widget.userName,
+                                  eventName: 'Partida com os cria',
+                                  game: 'Call of Duty',
+                                  playerCount: '4',
+                                  eventTime: '13:30',
+                                  imageUrl: 'images/games/cod.jfif',
+                                ),
+                              ),
+                            ),
+                          },
                           child: Text(
                             'COD: Warzone',
                             style: kSubTextStyle,
@@ -548,7 +944,21 @@ class _GameScreenState extends State<GameScreen> {
                           radius: 40.0,
                         ),
                         TextButton(
-                          onPressed: () => {},
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventGame(
+                                  userName: widget.userName,
+                                  eventName: 'Partida com os cria',
+                                  game: 'Call of Duty',
+                                  playerCount: '4',
+                                  eventTime: '13:30',
+                                  imageUrl: 'images/games/cod.jfif',
+                                ),
+                              ),
+                            ),
+                          },
                           child: Text(
                             'World of Warcraft',
                             style: kSubTextStyle,

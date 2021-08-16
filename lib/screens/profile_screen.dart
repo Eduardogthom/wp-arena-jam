@@ -232,13 +232,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               height: 15.0,
                             ),
                             Container(
-                                height: 50.0,
-                                width: 450.0,
-                                child: SubmitButton(
-                                  formKey: _formKey,
-                                  labelText: 'SALVAR',
-                                  userName: widget.userName,
-                                )),
+                              height: 50.0,
+                              width: 450.0,
+                              child: SubmitButton(
+                                formKey: _formKey,
+                                labelText: 'SALVAR',
+                                userName: widget.userName,
+                              ),
+                            ),
                           ],
                         ),
                       )
