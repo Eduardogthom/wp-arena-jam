@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:wp_arena_flutter/components/input.dart';
+import 'package:wp_arena_flutter/components/submit_button.dart';
 import 'package:wp_arena_flutter/constants.dart';
 import 'package:wp_arena_flutter/screens/home_screen.dart';
 import 'package:wp_arena_flutter/screens/sign_in_screen.dart';
@@ -40,8 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         RichText(
                           textAlign: TextAlign.center,
                           text: TextSpan(
-                              text:
-                                  "Agende e compartilhe jogos online",
+                              text: "Agende e compartilhe jogos online",
                               style: TextStyle(
                                 fontSize: 32.0,
                                 fontWeight: FontWeight.w600,
@@ -51,152 +52,35 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         SizedBox(height: 20.0),
                         Container(
-                          child: TextFormField(
-                            controller: nameController,
-                            style: TextStyle(
-                              color: kWhite,
-                              fontFamily: 'Montserrat',
-                            ),
-                            decoration: InputDecoration(
-                              focusedBorder: OutlineInputBorder(
-                                borderSide:
-                                    BorderSide(color: kBlue, width: 1.0),
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderSide:
-                                    BorderSide(color: kWhite, width: 1.0),
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              errorBorder: OutlineInputBorder(
-                                borderSide:
-                                    BorderSide(color: kCrimson, width: 1.0),
-                              ),
-                              focusedErrorBorder: OutlineInputBorder(
-                                borderSide:
-                                    BorderSide(color: kCrimson, width: 1.0),
-                              ),
-                              prefixIcon: Icon(
-                                Icons.person,
-                                color: kWhite,
-                                size: 25,
-                              ),
-                              hintText: "Usuário",
-                              hintStyle: TextStyle(
-                                color: kWhite,
-                                fontSize: 16.0,
-                                fontWeight: FontWeight.w500,
-                                fontFamily: 'Montserrat',
-                              ),
-                            ),
-                            validator: (value) {
-                              print(value);
-                              if (value == null || value.isEmpty) {
-                                return 'Digite um usuário válido!';
-                              }
-
-                              return null;
-                            },
+                          child: Input(
+                            hintText: 'Email',
+                            enabled: true,
+                            prefixIcon: Icons.email,
+                            errorMessage: 'Por favor, digite seu email.',
                           ),
                         ),
                         SizedBox(
-                          height: 15.0,
+                          height: 16.0,
                         ),
                         Container(
-                          child: TextFormField(
-                            obscureText: true,
-                            style: TextStyle(
-                              color: kWhite,
-                              fontFamily: 'Montserrat',
-                            ),
-                            decoration: InputDecoration(
-                              focusedBorder: OutlineInputBorder(
-                                borderSide:
-                                    BorderSide(color: kBlue, width: 1.0),
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderSide:
-                                    BorderSide(color: kWhite, width: 1.0),
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              focusedErrorBorder: OutlineInputBorder(
-                                borderSide:
-                                    BorderSide(color: kCrimson, width: 1.0),
-                              ),
-                              prefixIcon: Icon(
-                                Icons.lock,
-                                color: kWhite,
-                                size: 25,
-                              ),
-                              hintText: "Senha",
-                              hintStyle: TextStyle(
-                                color: kWhite,
-                                fontSize: 16.0,
-                                fontWeight: FontWeight.w500,
-                                fontFamily: 'Montserrat',
-                              ),
-                              errorBorder: OutlineInputBorder(
-                                borderSide:
-                                    BorderSide(color: kCrimson, width: 1.0),
-                              ),
-                            ),
-                            validator: (value) {
-                              print(value);
-                              if (value == null || value.isEmpty) {
-                                return 'Digite uma senha!';
-                              }
-
-                              return null;
-                            },
+                          child: Input(
+                            hintText: 'Senha',
+                            enabled: true,
+                            prefixIcon: Icons.lock,
+                            errorMessage: 'Por favor, digite sua senha.',
                           ),
                         ),
                         SizedBox(
                           height: 50.0,
                         ),
                         Container(
-                          height: 50.0,
-                          width: 450.0,
-                          child: ElevatedButton(
-                            onPressed: () => {
-                              if (_formKey.currentState!.validate())
-                                {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => HomeScreen(
-                                        userName: nameController.text,
-                                      ),
-                                    ),
-                                  ),
-                                }
-                            },
-                            child: Text(
-                              "LOGIN",
-                              style: TextStyle(
-                                fontSize: 25.0,
-                                fontWeight: FontWeight.w500,
-                                fontFamily: 'Montserrat',
-                              ),
-                            ),
-                            style: ButtonStyle(
-                              backgroundColor:
-                                  MaterialStateProperty.resolveWith<Color>(
-                                (Set<MaterialState> states) {
-                                  if (states.contains(MaterialState.pressed))
-                                    return Theme.of(context)
-                                        .colorScheme
-                                        .primary
-                                        .withOpacity(0.5);
-                                  else if (states
-                                      .contains(MaterialState.disabled))
-                                    return Colors.green;
-                                  return kPink; // Use the component's default.
-                                },
-                              ),
-                            ),
-                          ),
-                        ),
+                            height: 50.0,
+                            width: 450.0,
+                            child: SubmitButton(
+                              labelText: 'Login',
+                              formKey: _formKey,
+                              userName: 'Oie',
+                            )),
                       ],
                     ),
                   ),
