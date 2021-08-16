@@ -64,10 +64,7 @@ class _EventScreenCreatedState extends State<EventScreenCreated> {
                     SizedBox(
                       width: 15,
                     ),
-                    if(widget.private)
-                       EventTag(
-                      tagName: "Privado"
-                    )
+                    if (widget.private) EventTag(tagName: "Privado")
                   ],
                 ),
               ),
@@ -189,6 +186,48 @@ class _EventScreenCreatedState extends State<EventScreenCreated> {
                       ),
                     ),
                   ],
+                ),
+              ),
+              SizedBox(
+                width: double.infinity,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(vertical: 25, horizontal: 20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      RichText(
+                        textAlign: TextAlign.left,
+                        text: new TextSpan(
+                          style: kGreetingTextStyle,
+                          children: <TextSpan>[
+                            new TextSpan(
+                              text: 'Links',
+                              style: new TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 7),
+                        child: Text(
+                          'Convite: https://wp-arena.com/invite/112665',
+                          style: kDefaultRuleStyle,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 7),
+                        child: Text(
+                          'Assistir: https://twitch.tv/wp-arena/' + widget.game,
+                          style: kDefaultRuleStyle,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               Padding(
