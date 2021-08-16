@@ -16,15 +16,14 @@ class WPArena extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
-      initialRoute: HomeScreen.id,
+      home: SignInScreen(),
+      initialRoute: SignInScreen.id,
       routes: {
-        HomeScreen.id: (context) => HomeScreen(),
         LoginScreen.id: (context) => LoginScreen(),
         SignInScreen.id: (context) => SignInScreen(),
         ProfileScreen.id: (context) => ProfileScreen(),
         ScheduleMatchScreen.id: (context) => ScheduleMatchScreen(),
-         GameScreen.id: (context) => GameScreen(),
+        GameScreen.id: (context) => GameScreen(),
       },
     );
   }

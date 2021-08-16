@@ -10,6 +10,9 @@ import 'package:wp_arena_flutter/constants.dart';
 class HomeScreen extends StatefulWidget {
   static String id = 'home_screen';
 
+  HomeScreen({required this.userName});
+  final String userName;
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
