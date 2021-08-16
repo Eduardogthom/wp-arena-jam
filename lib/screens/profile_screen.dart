@@ -163,7 +163,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 child: Container(
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: Color.fromRGBO(0, 0, 0, 1),
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Dropdown(
@@ -229,7 +228,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               prefixIcon: Icons.lock,
                             ),
                             SizedBox(
-                              height: 15.0,
+                              height: 32.0,
                             ),
                             Container(
                               height: 50.0,

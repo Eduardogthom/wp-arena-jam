@@ -58,7 +58,7 @@ class Input extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
         ),
         hintStyle: TextStyle(
-          color: enabled ? kWhite : kGray,
+          color: enabled ? kWhite : kdisabledGray,
           fontSize: 14,
         ),
         hintText: hintText,
@@ -70,7 +70,7 @@ class Input extends StatelessWidget {
             : null,
         prefixIcon: Icon(
           prefixIcon,
-          color: enabled ? kWhite : kGray,
+          color: enabled ? kWhite : kdisabledGray,
           size: 20,
         ),
       ),

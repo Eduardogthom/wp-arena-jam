@@ -121,12 +121,12 @@ class _EventScreenState extends State<EventScreen> {
                         children: <Widget>[
                           Text(
                             "• ",
-                            style: kDefaultTextStyle,
+                            style: kDefaultRuleStyle,
                           ),
                           Expanded(
                             child: Text(
                               'Proibido xingamentos;',
-                              style: kDefaultTextStyle,
+                              style: kDefaultRuleStyle,
                             ),
                           ),
                         ],
@@ -139,12 +139,12 @@ class _EventScreenState extends State<EventScreen> {
                         children: <Widget>[
                           Text(
                             "• ",
-                            style: kDefaultTextStyle,
+                            style: kDefaultRuleStyle,
                           ),
                           Expanded(
                             child: Text(
                               'Somente jogadores acima de 20 anos;',
-                              style: kDefaultTextStyle,
+                              style: kDefaultRuleStyle,
                             ),
                           ),
                         ],
@@ -157,12 +157,12 @@ class _EventScreenState extends State<EventScreen> {
                         children: <Widget>[
                           Text(
                             "• ",
-                            style: kDefaultTextStyle,
+                            style: kDefaultRuleStyle,
                           ),
                           Expanded(
                             child: Text(
                               'Fazer amizades.',
-                              style: kDefaultTextStyle,
+                              style: kDefaultRuleStyle,
                             ),
                           ),
                         ],

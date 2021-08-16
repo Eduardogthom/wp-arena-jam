@@ -35,14 +35,19 @@ class _EventScreenDoneState extends State<EventScreenDone> {
     double _rating1 = 0;
     double _rating2 = 0;
     bool _isDisabled = true;
-    
 
     showModalBottomSheet<void>(
       context: context,
       builder: (BuildContext context) {
         return Container(
           height: 300,
-          color: kBlack,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(32),
+              topRight: Radius.circular(32),
+            ),
+            color: kBlack,
+          ),
           child: Padding(
             padding: const EdgeInsets.all(15.0),
             child: Column(
@@ -58,7 +63,7 @@ class _EventScreenDoneState extends State<EventScreenDone> {
                   ),
                 ),
                 SizedBox(
-                  height: 10.0,
+                  height: 16.0,
                 ),
                 Text(
                   "Comportamento",
@@ -70,7 +75,7 @@ class _EventScreenDoneState extends State<EventScreenDone> {
                   ),
                 ),
                 SizedBox(
-                  height: 10.0,
+                  height: 16.0,
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 5.0),
@@ -80,9 +85,8 @@ class _EventScreenDoneState extends State<EventScreenDone> {
                     direction: Axis.horizontal,
                     allowHalfRating: true,
                     itemCount: 5,
+                    glowColor: Colors.transparent,
                     itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
-                    glow: true,
-                    glowColor: kBlue,
                     unratedColor: kGrayAlt,
                     itemBuilder: (context, _) => Icon(
                       Icons.star,
@@ -99,7 +103,7 @@ class _EventScreenDoneState extends State<EventScreenDone> {
                   ),
                 ),
                 SizedBox(
-                  height: 10.0,
+                  height: 16.0,
                 ),
                 Text(
                   "Desempenho",
@@ -111,7 +115,7 @@ class _EventScreenDoneState extends State<EventScreenDone> {
                   ),
                 ),
                 SizedBox(
-                  height: 10.0,
+                  height: 16.0,
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 5.0),
@@ -121,9 +125,8 @@ class _EventScreenDoneState extends State<EventScreenDone> {
                     direction: Axis.horizontal,
                     allowHalfRating: true,
                     itemCount: 5,
+                    glowColor: Colors.transparent,
                     itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
-                    glow: true,
-                    glowColor: kPink,
                     unratedColor: kGrayAlt,
                     itemBuilder: (context, _) => Icon(
                       Icons.star,
@@ -140,63 +143,74 @@ class _EventScreenDoneState extends State<EventScreenDone> {
                   ),
                 ),
                 SizedBox(
-                  height: 10.0,
+                  height: 16.0,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    ElevatedButton(
-                      child: const Text(
-                        'Cancelar',
-                        style: TextStyle(
-                          fontSize: 25.0,
-                          fontWeight: FontWeight.w500,
-                          fontFamily: 'Montserrat',
+                    Expanded(
+                      child: ElevatedButton(
+                        child: const Text(
+                          'Cancelar',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.w500,
+                            fontFamily: 'Montserrat',
+                          ),
                         ),
-                      ),
-                      onPressed: () => Navigator.pop(context),
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.resolveWith<Color>(
-                          (Set<MaterialState> states) {
-                            if (states.contains(MaterialState.pressed))
-                              return Theme.of(context)
-                                  .colorScheme
-                                  .primary
-                                  .withOpacity(0.5);
-                            else if (states.contains(MaterialState.disabled))
-                              return kGray;
-                            return kBlack; // Use the component's default.
-                          },
+                        onPressed: () => Navigator.pop(context),
+                        style: ButtonStyle(
+                          shadowColor:
+                              MaterialStateProperty.all(Colors.transparent),
+                          backgroundColor:
+                              MaterialStateProperty.resolveWith<Color>(
+                            (Set<MaterialState> states) {
+                              if (states.contains(MaterialState.pressed))
+                                return Theme.of(context)
+                                    .colorScheme
+                                    .primary
+                                    .withOpacity(0.5);
+                              else if (states.contains(MaterialState.disabled))
+                                return kGray;
+                              return kBlack; // Use the component's default.
+                            },
+                          ),
                         ),
                       ),
                     ),
-                    ElevatedButton(
-                      child: const Text(
-                        'Enviar',
-                        style: TextStyle(
-                          fontSize: 25.0,
-                          fontWeight: FontWeight.w500,
-                          fontFamily: 'Montserrat',
+                    SizedBox(
+                      width: 8,
+                    ),
+                    Expanded(
+                      child: ElevatedButton(
+                        child: const Text(
+                          'Enviar',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.w500,
+                            fontFamily: 'Montserrat',
+                          ),
                         ),
-                      ),
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.resolveWith<Color>(
-                          (Set<MaterialState> states) {
-                            if (states.contains(MaterialState.pressed))
-                              return Theme.of(context)
-                                  .colorScheme
-                                  .primary
-                                  .withOpacity(0.5);
-                            else if (states.contains(MaterialState.disabled))
-                              return kGray;
-                            return kBlack; // Use the component's default.
-                          },
+                        style: ButtonStyle(
+                          shadowColor:
+                              MaterialStateProperty.all(Colors.transparent),
+                          backgroundColor:
+                              MaterialStateProperty.resolveWith<Color>(
+                            (Set<MaterialState> states) {
+                              if (states.contains(MaterialState.pressed))
+                                return Theme.of(context)
+                                    .colorScheme
+                                    .primary
+                                    .withOpacity(0.5);
+                              else if (states.contains(MaterialState.disabled))
+                                return kGray;
+                              return kBlack; // Use the component's default.
+                            },
+                          ),
                         ),
+                        onPressed: () => Navigator.pop(context),
                       ),
-                      onPressed: () => Navigator.pop(context),
-                    )
+                    ),
                   ],
                 )
               ],
@@ -301,12 +315,12 @@ class _EventScreenDoneState extends State<EventScreenDone> {
                         children: <Widget>[
                           Text(
                             "• ",
-                            style: kDefaultTextStyle,
+                            style: kDefaultRuleStyle,
                           ),
                           Expanded(
                             child: Text(
                               'Proibido xingamentos;',
-                              style: kDefaultTextStyle,
+                              style: kDefaultRuleStyle,
                             ),
                           ),
                         ],
@@ -319,12 +333,12 @@ class _EventScreenDoneState extends State<EventScreenDone> {
                         children: <Widget>[
                           Text(
                             "• ",
-                            style: kDefaultTextStyle,
+                            style: kDefaultRuleStyle,
                           ),
                           Expanded(
                             child: Text(
                               'Somente jogadores acima de 20 anos;',
-                              style: kDefaultTextStyle,
+                              style: kDefaultRuleStyle,
                             ),
                           ),
                         ],
@@ -337,12 +351,12 @@ class _EventScreenDoneState extends State<EventScreenDone> {
                         children: <Widget>[
                           Text(
                             "• ",
-                            style: kDefaultTextStyle,
+                            style: kDefaultRuleStyle,
                           ),
                           Expanded(
                             child: Text(
                               'Fazer amizades.',
-                              style: kDefaultTextStyle,
+                              style: kDefaultRuleStyle,
                             ),
                           ),
                         ],

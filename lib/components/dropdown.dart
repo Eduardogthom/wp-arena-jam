@@ -20,7 +20,6 @@ class Dropdown extends StatelessWidget {
         value: selectedGender,
         decoration: InputDecoration(
           isDense: true,
-          fillColor: Color.fromRGBO(196, 196, 196, 0.2),
           contentPadding: EdgeInsets.all(11),
           // contentPadding: EdgeInsets.all(0),
           focusedBorder: OutlineInputBorder(
