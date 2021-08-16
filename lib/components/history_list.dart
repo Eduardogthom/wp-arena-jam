@@ -98,6 +98,7 @@ class GamesHistory extends StatelessWidget {
                 maxPlayers: "5",
                 tag1: 'BATTLE ROYALE',
                 tag2: 'FPS',
+                done: true,
               ),
               SizedBox(
                 height: 30.0,
@@ -129,6 +130,8 @@ class GamesHistory extends StatelessWidget {
                 maxPlayers: "5",
                 tag1: 'AUTOCHESS',
                 tag2: 'ONLINE',
+                private: true,
+                done: true,
               ),
               EventCard(
                 eventName: 'X1 no futeba',
@@ -141,6 +144,7 @@ class GamesHistory extends StatelessWidget {
                 maxPlayers: "5",
                 tag1: 'AUTOCHESS',
                 tag2: 'ONLINE',
+                done: true,
               ),
               EventCard(
                 eventName: 'Futeba de carro',
@@ -153,6 +157,7 @@ class GamesHistory extends StatelessWidget {
                 maxPlayers: "5",
                 tag1: 'FUTEBOL',
                 tag2: 'CORRIDA',
+                done: true,
               ),
             ],
           ),

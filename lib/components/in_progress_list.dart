@@ -52,6 +52,7 @@ class InProgressGames extends StatelessWidget {
                 maxPlayers: "5",
                 tag1: 'MOBA',
                 tag2: 'ONLINE',
+                private: true,
               ),
               EventCard(
                 eventName: 'Minezinho com a galera',
@@ -131,6 +132,7 @@ class InProgressGames extends StatelessWidget {
                 maxPlayers: "5",
                 tag1: 'TABULEIRO',
                 tag2: 'ONLINE',
+                private: true,
               ),
               SizedBox(
                 height: 30.0,
@@ -217,6 +219,7 @@ class InProgressGames extends StatelessWidget {
                 maxPlayers: "5",
                 tag1: 'FUTEBOL',
                 tag2: 'ONLINE',
+                private: true,
               ),
               EventCard(
                 eventName: 'Paladins safado',
