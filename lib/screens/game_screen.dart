@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:wp_arena_flutter/components/avatar_button.dart';
 import 'package:wp_arena_flutter/components/gradient_bottom_navigator.dart';
 import 'package:wp_arena_flutter/components/input.dart';
 import 'package:wp_arena_flutter/constants.dart';
@@ -71,83 +72,68 @@ class _GameScreenState extends State<GameScreen> {
                 prefixIcon: Icons.search,
               ),
               SizedBox(
-                height: 20.0,
+                height: 24.0,
               ),
               //Lista de jogos
               Expanded(
                 child: GridView.count(
                   crossAxisCount: 3,
-                  childAspectRatio: 3 / 4,
+                  childAspectRatio: 3 / 4.2,
                   children: [
                     Column(
                       children: [
-                        CircleAvatar(
-                          foregroundImage: AssetImage('images/games/cod.jfif'),
-                          radius: 40.0,
-                        ),
-                        TextButton(
-                          onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => EventGame(
-                                  userName: widget.userName,
-                                  eventName: 'Partida com os cria',
-                                  game: 'Call of Duty',
-                                  playerCount: '4',
-                                  eventTime: '13:30',
-                                  imageUrl: 'images/games/cod.jfif',
+                        AvatarButton(
+                            radius: 42,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EventGame(
+                                    userName: widget.userName,
+                                    eventName: 'Partida com os cria',
+                                    game: 'Call of Duty',
+                                    playerCount: '4',
+                                    eventTime: '13:30',
+                                    imageUrl: 'images/games/cod.jfif',
+                                  ),
                                 ),
-                              ),
-                            ),
-                          },
-                          child: Text(
-                            'Call of Duty',
-                            style: kSubTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
+                              );
+                            },
+                            foregroundImage:
+                                AssetImage('images/games/cod.jfif'),
+                            labelText: "Call of Duty"),
                       ],
                     ),
                     Column(
                       children: [
-                        CircleAvatar(
-                          foregroundImage:
-                              AssetImage('images/games/battlefield.jpg'),
-                          radius: 40.0,
-                        ),
-                        TextButton(
-                          onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => EventGame(
-                                  userName: widget.userName,
-                                  eventName: 'Partida com os cria',
-                                  game: 'Battlefield 2042',
-                                  playerCount: '5',
-                                  eventTime: '13:30',
-                                  imageUrl: 'images/games/battlefield.jpg',
+                        AvatarButton(
+                            radius: 42,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EventGame(
+                                    userName: widget.userName,
+                                    eventName: 'Partida com os cria',
+                                    game: 'Battlefield 2042',
+                                    playerCount: '5',
+                                    eventTime: '13:30',
+                                    imageUrl: 'images/games/battlefield.jpg',
+                                  ),
                                 ),
-                              ),
-                            ),
-                          },
-                          child: Text(
-                            'Battlefield 2042',
-                            style: kSubTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
+                              );
+                            },
+                            foregroundImage:
+                                AssetImage('images/games/battlefield.jpg'),
+                            labelText: "Battlefield 2042"),
                       ],
                     ),
                     Column(
                       children: [
-                        CircleAvatar(
-                          foregroundImage: AssetImage('images/games/csgo.jpg'),
-                          radius: 40.0,
-                        ),
-                        TextButton(
-                          onPressed: () => {
+                        AvatarButton(
+                          radius: 42,
+                          labelText: 'Counter Strike',
+                          onTap: () {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
@@ -160,811 +146,628 @@ class _GameScreenState extends State<GameScreen> {
                                   imageUrl: 'images/games/csgo.jpg',
                                 ),
                               ),
-                            ),
+                            );
                           },
-                          child: Text(
-                            'Counter Strike: GO',
-                            style: kSubTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
+                          foregroundImage: AssetImage('images/games/csgo.jpg'),
                         ),
                       ],
                     ),
                     Column(
                       children: [
-                        CircleAvatar(
-                          foregroundImage:
-                              AssetImage('images/games/dark_souls_3.jpg'),
-                          radius: 40.0,
-                        ),
-                        TextButton(
-                          onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => EventGame(
-                                  userName: widget.userName,
-                                  eventName: 'Partida com os cria',
-                                  game: 'Dark Souls 3',
-                                  playerCount: '3',
-                                  eventTime: '13:30',
-                                  imageUrl: 'images/games/dark_souls_3.jpg',
+                        AvatarButton(
+                            radius: 42,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EventGame(
+                                    userName: widget.userName,
+                                    eventName: 'Partida com os cria',
+                                    game: 'Dark Souls 3',
+                                    playerCount: '3',
+                                    eventTime: '13:30',
+                                    imageUrl: 'images/games/dark_souls_3.jpg',
+                                  ),
                                 ),
-                              ),
-                            ),
-                          },
-                          child: Text(
-                            'Dark Souls 3',
-                            style: kSubTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
+                              );
+                            },
+                            foregroundImage:
+                                AssetImage('images/games/dark_souls_3.jpg'),
+                            labelText: "Dark Souls 3"),
                       ],
                     ),
                     Column(
                       children: [
-                        CircleAvatar(
-                          foregroundImage:
-                              AssetImage('images/games/destiny_2.jpg'),
-                          radius: 40.0,
-                        ),
-                        TextButton(
-                          onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => EventGame(
-                                  userName: widget.userName,
-                                  eventName: 'Partida com os cria',
-                                  game: 'Destiny 2',
-                                  playerCount: '2',
-                                  eventTime: '13:30',
-                                  imageUrl: 'images/games/destiny_2.jpg',
+                        AvatarButton(
+                            radius: 42,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EventGame(
+                                    userName: widget.userName,
+                                    eventName: 'Partida com os cria',
+                                    game: 'Destiny 2',
+                                    playerCount: '2',
+                                    eventTime: '13:30',
+                                    imageUrl: 'images/games/destiny_2.jpg',
+                                  ),
                                 ),
-                              ),
-                            ),
-                          },
-                          child: Text(
-                            'Destiny 2',
-                            style: kSubTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
+                              );
+                            },
+                            foregroundImage:
+                                AssetImage('images/games/destiny_2.jpg'),
+                            labelText: "Destiny 2"),
                       ],
                     ),
                     Column(
                       children: [
-                        CircleAvatar(
-                          foregroundImage: AssetImage('images/games/fifa.jpg'),
-                          radius: 40.0,
-                        ),
-                        TextButton(
-                          onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => EventGame(
-                                  userName: widget.userName,
-                                  eventName: 'Partida com os cria',
-                                  game: 'Fifa',
-                                  playerCount: '4',
-                                  eventTime: '13:30',
-                                  imageUrl: 'images/games/fifa.jpg',
+                        AvatarButton(
+                            radius: 42,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EventGame(
+                                    userName: widget.userName,
+                                    eventName: 'Partida com os cria',
+                                    game: 'Fifa',
+                                    playerCount: '4',
+                                    eventTime: '13:30',
+                                    imageUrl: 'images/games/fifa.jpg',
+                                  ),
                                 ),
-                              ),
-                            ),
-                          },
-                          child: Text(
-                            'Fifa',
-                            style: kSubTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
+                              );
+                            },
+                            foregroundImage:
+                                AssetImage('images/games/fifa.jpg'),
+                            labelText: "Fifa"),
                       ],
                     ),
                     Column(
                       children: [
-                        CircleAvatar(
-                          foregroundImage:
-                              AssetImage('images/games/five_nights.jpg'),
-                          radius: 40.0,
-                        ),
-                        TextButton(
-                          onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => EventGame(
-                                  userName: widget.userName,
-                                  eventName: 'Partida com os cria',
-                                  game: 'Five Nights at Freddys',
-                                  playerCount: '2',
-                                  eventTime: '13:30',
-                                  imageUrl: 'images/games/five_nights.jpg',
+                        AvatarButton(
+                            radius: 42,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EventGame(
+                                    userName: widget.userName,
+                                    eventName: 'Partida com os cria',
+                                    game: 'Five Nights at Freddys',
+                                    playerCount: '2',
+                                    eventTime: '13:30',
+                                    imageUrl: 'images/games/five_nights.jpg',
+                                  ),
                                 ),
-                              ),
-                            ),
-                          },
-                          child: Text(
-                            'Five Nights at Freddys',
-                            style: kSubTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
+                              );
+                            },
+                            foregroundImage:
+                                AssetImage('images/games/five_nights.jpg'),
+                            labelText: "Five Nights at Freddys"),
                       ],
                     ),
                     Column(
                       children: [
-                        CircleAvatar(
-                          foregroundImage:
-                              AssetImage('images/games/forsaken_world.png'),
-                          radius: 40.0,
-                        ),
-                        TextButton(
-                          onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => EventGame(
-                                  userName: widget.userName,
-                                  eventName: 'Partida com os cria',
-                                  game: 'Forsaken World',
-                                  playerCount: '5',
-                                  eventTime: '13:30',
-                                  imageUrl: 'images/games/forsaken_world.png',
+                        AvatarButton(
+                            radius: 42,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EventGame(
+                                    userName: widget.userName,
+                                    eventName: 'Partida com os cria',
+                                    game: 'Forsaken World',
+                                    playerCount: '5',
+                                    eventTime: '13:30',
+                                    imageUrl: 'images/games/forsaken_world.png',
+                                  ),
                                 ),
-                              ),
-                            ),
-                          },
-                          child: Text(
-                            'Forsaken World',
-                            style: kSubTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
+                              );
+                            },
+                            foregroundImage:
+                                AssetImage('images/games/forsaken_world.png'),
+                            labelText: "Forsaken World"),
                       ],
                     ),
                     Column(
                       children: [
-                        CircleAvatar(
-                          foregroundImage:
-                              AssetImage('images/games/fortnite.jpg'),
-                          radius: 40.0,
-                        ),
-                        TextButton(
-                          onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => EventGame(
-                                  userName: widget.userName,
-                                  eventName: 'Partida com os cria',
-                                  game: 'Fornite',
-                                  playerCount: '2',
-                                  eventTime: '13:30',
-                                  imageUrl: 'images/games/fortnite.jpg',
+                        AvatarButton(
+                            radius: 42,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EventGame(
+                                    userName: widget.userName,
+                                    eventName: 'Partida com os cria',
+                                    game: 'Fornite',
+                                    playerCount: '2',
+                                    eventTime: '13:30',
+                                    imageUrl: 'images/games/fortnite.jpg',
+                                  ),
                                 ),
-                              ),
-                            ),
-                          },
-                          child: Text(
-                            'Fornite',
-                            style: kSubTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
+                              );
+                            },
+                            foregroundImage:
+                                AssetImage('images/games/fortnite.jpg'),
+                            labelText: "Fortnite"),
                       ],
                     ),
                     Column(
                       children: [
-                        CircleAvatar(
-                          foregroundImage:
-                              AssetImage('images/games/genshin_Impact.jpg'),
-                          radius: 40.0,
-                        ),
-                        TextButton(
-                          onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => EventGame(
-                                  userName: widget.userName,
-                                  eventName: 'Partida com os cria',
-                                  game: 'Genshin Impact',
-                                  playerCount: '1',
-                                  eventTime: '13:30',
-                                  imageUrl: 'images/games/genshin_Impact.jpg',
+                        AvatarButton(
+                            radius: 42,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EventGame(
+                                    userName: widget.userName,
+                                    eventName: 'Partida com os cria',
+                                    game: 'Genshin Impact',
+                                    playerCount: '1',
+                                    eventTime: '13:30',
+                                    imageUrl: 'images/games/genshin_Impact.jpg',
+                                  ),
                                 ),
-                              ),
-                            ),
-                          },
-                          child: Text(
-                            'Genshin Impact',
-                            style: kSubTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
+                              );
+                            },
+                            foregroundImage:
+                                AssetImage('images/games/genshin_Impact.jpg'),
+                            labelText: "Genshin Impact"),
                       ],
                     ),
                     Column(
                       children: [
-                        CircleAvatar(
-                          foregroundImage: AssetImage('images/games/hos.jpg'),
-                          radius: 40.0,
-                        ),
-                        TextButton(
-                          onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => EventGame(
-                                  userName: widget.userName,
-                                  eventName: 'Partida com os cria',
-                                  game: 'Heroes of the Storm',
-                                  playerCount: '2',
-                                  eventTime: '13:30',
-                                  imageUrl: 'images/games/hos.jpg',
+                        AvatarButton(
+                            radius: 42,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EventGame(
+                                    userName: widget.userName,
+                                    eventName: 'Partida com os cria',
+                                    game: 'Heroes of the Storm',
+                                    playerCount: '2',
+                                    eventTime: '13:30',
+                                    imageUrl: 'images/games/hos.jpg',
+                                  ),
                                 ),
-                              ),
-                            ),
-                          },
-                          child: Text(
-                            'Heroes of the Storm',
-                            style: kSubTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
+                              );
+                            },
+                            foregroundImage: AssetImage('images/games/hos.jpg'),
+                            labelText: "Heroes of the Storm"),
                       ],
                     ),
                     Column(
                       children: [
-                        CircleAvatar(
-                          foregroundImage: AssetImage('images/games/l4d.jpg'),
-                          radius: 40.0,
-                        ),
-                        TextButton(
-                          onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => EventGame(
-                                  userName: widget.userName,
-                                  eventName: 'Partida com os cria',
-                                  game: 'Left 4 Dead 2',
-                                  playerCount: '4',
-                                  eventTime: '13:30',
-                                  imageUrl: 'images/games/l4d.jpg',
+                        AvatarButton(
+                            radius: 42,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EventGame(
+                                    userName: widget.userName,
+                                    eventName: 'Partida com os cria',
+                                    game: 'Left 4 Dead 2',
+                                    playerCount: '4',
+                                    eventTime: '13:30',
+                                    imageUrl: 'images/games/l4d.jpg',
+                                  ),
                                 ),
-                              ),
-                            ),
-                          },
-                          child: Text(
-                            'Left 4 Dead 2',
-                            style: kSubTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
+                              );
+                            },
+                            foregroundImage: AssetImage('images/games/l4d.jpg'),
+                            labelText: "Left 4 Dead"),
                       ],
                     ),
                     Column(
                       children: [
-                        CircleAvatar(
-                          foregroundImage: AssetImage('images/games/lol.jpg'),
-                          radius: 40.0,
-                        ),
-                        TextButton(
-                          onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => EventGame(
-                                  userName: widget.userName,
-                                  eventName: 'Partida com os cria',
-                                  game: 'League of Legends',
-                                  playerCount: '5',
-                                  eventTime: '13:30',
-                                  imageUrl: 'images/games/lol.jpg',
+                        AvatarButton(
+                            radius: 42,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EventGame(
+                                    userName: widget.userName,
+                                    eventName: 'Partida com os cria',
+                                    game: 'League of Legends',
+                                    playerCount: '5',
+                                    eventTime: '13:30',
+                                    imageUrl: 'images/games/lol.jpg',
+                                  ),
                                 ),
-                              ),
-                            ),
-                          },
-                          child: Text(
-                            'League of Legends',
-                            style: kSubTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
+                              );
+                            },
+                            foregroundImage: AssetImage('images/games/lol.jpg'),
+                            labelText: "League of Legends"),
                       ],
                     ),
                     Column(
                       children: [
-                        CircleAvatar(
-                          foregroundImage: AssetImage('images/games/ludo.jpg'),
-                          radius: 40.0,
-                        ),
-                        TextButton(
-                          onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => EventGame(
-                                  userName: widget.userName,
-                                  eventName: 'Partida com os cria',
-                                  game: 'Ludo',
-                                  playerCount: '4',
-                                  eventTime: '13:30',
-                                  imageUrl: 'images/games/ludo.jpg',
+                        AvatarButton(
+                            radius: 42,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EventGame(
+                                    userName: widget.userName,
+                                    eventName: 'Partida com os cria',
+                                    game: 'Ludo',
+                                    playerCount: '4',
+                                    eventTime: '13:30',
+                                    imageUrl: 'images/games/ludo.jpg',
+                                  ),
                                 ),
-                              ),
-                            ),
-                          },
-                          child: Text(
-                            'Ludo',
-                            style: kSubTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
+                              );
+                            },
+                            foregroundImage:
+                                AssetImage('images/games/ludo.jpg'),
+                            labelText: "Ludo"),
                       ],
                     ),
                     Column(
                       children: [
-                        CircleAvatar(
-                          foregroundImage:
-                              AssetImage('images/games/minecraft.jpg'),
-                          radius: 40.0,
-                        ),
-                        TextButton(
-                          onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => EventGame(
-                                  userName: widget.userName,
-                                  eventName: 'Partida com os cria',
-                                  game: 'Minecraft',
-                                  playerCount: '2',
-                                  eventTime: '13:30',
-                                  imageUrl: 'images/games/minecraft.jpg',
+                        AvatarButton(
+                            radius: 42,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EventGame(
+                                    userName: widget.userName,
+                                    eventName: 'Partida com os cria',
+                                    game: 'Minecraft',
+                                    playerCount: '2',
+                                    eventTime: '13:30',
+                                    imageUrl: 'images/games/minecraft.jpg',
+                                  ),
                                 ),
-                              ),
-                            ),
-                          },
-                          child: Text(
-                            'Minecraft',
-                            style: kSubTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
+                              );
+                            },
+                            foregroundImage:
+                                AssetImage('images/games/minecraft.jpg'),
+                            labelText: "Minecraft"),
                       ],
                     ),
                     Column(
                       children: [
-                        CircleAvatar(
-                          foregroundImage:
-                              AssetImage('images/games/monster_hunter.jpg'),
-                          radius: 40.0,
-                        ),
-                        TextButton(
-                          onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => EventGame(
-                                  userName: widget.userName,
-                                  eventName: 'Partida com os cria',
-                                  game: 'Monster Hunter World',
-                                  playerCount: '3',
-                                  eventTime: '13:30',
-                                  imageUrl: 'images/games/monster_hunter.jpg',
+                        AvatarButton(
+                            radius: 42,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EventGame(
+                                    userName: widget.userName,
+                                    eventName: 'Partida com os cria',
+                                    game: 'Monster Hunter World',
+                                    playerCount: '3',
+                                    eventTime: '13:30',
+                                    imageUrl: 'images/games/monster_hunter.jpg',
+                                  ),
                                 ),
-                              ),
-                            ),
-                          },
-                          child: Text(
-                            'Monster Hunter World',
-                            style: kSubTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
+                              );
+                            },
+                            foregroundImage:
+                                AssetImage('images/games/monster_hunter.jpg'),
+                            labelText: "Monster Hunter"),
                       ],
                     ),
                     Column(
                       children: [
-                        CircleAvatar(
-                          foregroundImage:
-                              AssetImage('images/games/new_world.jpg'),
-                          radius: 40.0,
-                        ),
-                        TextButton(
-                          onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => EventGame(
-                                  userName: widget.userName,
-                                  eventName: 'Partida com os cria',
-                                  game: 'New World',
-                                  playerCount: '2',
-                                  eventTime: '13:30',
-                                  imageUrl: 'images/games/new_world.jpg',
+                        AvatarButton(
+                            radius: 42,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EventGame(
+                                    userName: widget.userName,
+                                    eventName: 'Partida com os cria',
+                                    game: 'New World',
+                                    playerCount: '2',
+                                    eventTime: '13:30',
+                                    imageUrl: 'images/games/new_world.jpg',
+                                  ),
                                 ),
-                              ),
-                            ),
-                          },
-                          child: Text(
-                            'New World',
-                            style: kSubTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
+                              );
+                            },
+                            foregroundImage:
+                                AssetImage('images/games/new_world.jpg'),
+                            labelText: "New World"),
                       ],
                     ),
                     Column(
                       children: [
-                        CircleAvatar(
-                          foregroundImage:
-                              AssetImage('images/games/overwatch.jpg'),
-                          radius: 40.0,
-                        ),
-                        TextButton(
-                          onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => EventGame(
-                                  userName: widget.userName,
-                                  eventName: 'Partida com os cria',
-                                  game: 'Overwatch',
-                                  playerCount: '1',
-                                  eventTime: '13:30',
-                                  imageUrl: 'images/games/overwatch.jpg',
+                        AvatarButton(
+                            radius: 42,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EventGame(
+                                    userName: widget.userName,
+                                    eventName: 'Partida com os cria',
+                                    game: 'Overwatch',
+                                    playerCount: '1',
+                                    eventTime: '13:30',
+                                    imageUrl: 'images/games/overwatch.jpg',
+                                  ),
                                 ),
-                              ),
-                            ),
-                          },
-                          child: Text(
-                            'Overwatch',
-                            style: kSubTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
+                              );
+                            },
+                            foregroundImage:
+                                AssetImage('images/games/overwatch.jpg'),
+                            labelText: "Overwatch"),
                       ],
                     ),
                     Column(
                       children: [
-                        CircleAvatar(
-                          foregroundImage:
-                              AssetImage('images/games/paladins.jpg'),
-                          radius: 40.0,
-                        ),
-                        TextButton(
-                          onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => EventGame(
-                                  userName: widget.userName,
-                                  eventName: 'Partida com os cria',
-                                  game: 'Paladins',
-                                  playerCount: '4',
-                                  eventTime: '13:30',
-                                  imageUrl: 'images/games/paladins.jpg',
+                        AvatarButton(
+                            radius: 42,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EventGame(
+                                    userName: widget.userName,
+                                    eventName: 'Partida com os cria',
+                                    game: 'Paladins',
+                                    playerCount: '4',
+                                    eventTime: '13:30',
+                                    imageUrl: 'images/games/paladins.jpg',
+                                  ),
                                 ),
-                              ),
-                            ),
-                          },
-                          child: Text(
-                            'Paladins',
-                            style: kSubTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
+                              );
+                            },
+                            foregroundImage:
+                                AssetImage('images/games/paladins.jpg'),
+                            labelText: "Paladins"),
                       ],
                     ),
                     Column(
                       children: [
-                        CircleAvatar(
-                          foregroundImage: AssetImage('images/games/pes.jpg'),
-                          radius: 40.0,
-                        ),
-                        TextButton(
-                          onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => EventGame(
-                                  userName: widget.userName,
-                                  eventName: 'Partida com os cria',
-                                  game: 'PES 2021',
-                                  playerCount: '2',
-                                  eventTime: '13:30',
-                                  imageUrl: 'images/games/pes.jpg',
+                        AvatarButton(
+                            radius: 42,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EventGame(
+                                    userName: widget.userName,
+                                    eventName: 'Partida com os cria',
+                                    game: 'PES 2021',
+                                    playerCount: '2',
+                                    eventTime: '13:30',
+                                    imageUrl: 'images/games/pes.jpg',
+                                  ),
                                 ),
-                              ),
-                            ),
-                          },
-                          child: Text(
-                            'PES 2021',
-                            style: kSubTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
+                              );
+                            },
+                            foregroundImage: AssetImage('images/games/pes.jpg'),
+                            labelText: "PES"),
                       ],
                     ),
                     Column(
                       children: [
-                        CircleAvatar(
-                          foregroundImage:
-                              AssetImage('images/games/pokemon_go.jpg'),
-                          radius: 40.0,
-                        ),
-                        TextButton(
-                          onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => EventGame(
-                                  userName: widget.userName,
-                                  eventName: 'Partida com os cria',
-                                  game: 'Pokémon GO',
-                                  playerCount: '4',
-                                  eventTime: '13:30',
-                                  imageUrl: 'images/games/pokemon_go.jpg',
+                        AvatarButton(
+                            radius: 42,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EventGame(
+                                    userName: widget.userName,
+                                    eventName: 'Partida com os cria',
+                                    game: 'Pokémon GO',
+                                    playerCount: '4',
+                                    eventTime: '13:30',
+                                    imageUrl: 'images/games/pokemon_go.jpg',
+                                  ),
                                 ),
-                              ),
-                            ),
-                          },
-                          child: Text(
-                            'Pokémon GO',
-                            style: kSubTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
+                              );
+                            },
+                            foregroundImage:
+                                AssetImage('images/games/pokemon_go.jpg'),
+                            labelText: "Pokemon GO"),
                       ],
                     ),
                     Column(
                       children: [
-                        CircleAvatar(
-                          foregroundImage: AssetImage('images/games/pubg.jpg'),
-                          radius: 40.0,
-                        ),
-                        TextButton(
-                          onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => EventGame(
-                                  userName: widget.userName,
-                                  eventName: 'Partida com os cria',
-                                  game: 'PUBG',
-                                  playerCount: '2',
-                                  eventTime: '13:30',
-                                  imageUrl: 'images/games/pubg.jpg',
+                        AvatarButton(
+                            radius: 42,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EventGame(
+                                    userName: widget.userName,
+                                    eventName: 'Partida com os cria',
+                                    game: 'PUBG',
+                                    playerCount: '2',
+                                    eventTime: '13:30',
+                                    imageUrl: 'images/games/pubg.jpg',
+                                  ),
                                 ),
-                              ),
-                            ),
-                          },
-                          child: Text(
-                            'PUBG',
-                            style: kSubTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
+                              );
+                            },
+                            foregroundImage:
+                                AssetImage('images/games/pubg.jpg'),
+                            labelText: "PUBG"),
                       ],
                     ),
                     Column(
                       children: [
-                        CircleAvatar(
-                          foregroundImage:
-                              AssetImage('images/games/roblox.jpg'),
-                          radius: 40.0,
-                        ),
-                        TextButton(
-                          onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => EventGame(
-                                  userName: widget.userName,
-                                  eventName: 'Partida com os cria',
-                                  game: 'Roblox',
-                                  playerCount: '4',
-                                  eventTime: '13:30',
-                                  imageUrl: 'images/games/roblox.jpg',
+                        AvatarButton(
+                            radius: 42,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EventGame(
+                                    userName: widget.userName,
+                                    eventName: 'Partida com os cria',
+                                    game: 'Roblox',
+                                    playerCount: '4',
+                                    eventTime: '13:30',
+                                    imageUrl: 'images/games/roblox.jpg',
+                                  ),
                                 ),
-                              ),
-                            ),
-                          },
-                          child: Text(
-                            'Roblox',
-                            style: kSubTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
+                              );
+                            },
+                            foregroundImage:
+                                AssetImage('images/games/roblox.jpg'),
+                            labelText: "Roblox"),
                       ],
                     ),
                     Column(
                       children: [
-                        CircleAvatar(
-                          foregroundImage:
-                              AssetImage('images/games/rocket_league.jpg'),
-                          radius: 40.0,
-                        ),
-                        TextButton(
-                          onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => EventGame(
-                                  userName: widget.userName,
-                                  eventName: 'Partida com os cria',
-                                  game: 'Rocket League',
-                                  playerCount: '4',
-                                  eventTime: '13:30',
-                                  imageUrl: 'images/games/rocket_league.jpg',
+                        AvatarButton(
+                            radius: 42,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EventGame(
+                                    userName: widget.userName,
+                                    eventName: 'Partida com os cria',
+                                    game: 'Rocket League',
+                                    playerCount: '4',
+                                    eventTime: '13:30',
+                                    imageUrl: 'images/games/rocket_league.jpg',
+                                  ),
                                 ),
-                              ),
-                            ),
-                          },
-                          child: Text(
-                            'Rocket League',
-                            style: kSubTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
+                              );
+                            },
+                            foregroundImage:
+                                AssetImage('images/games/rocket_league.jpg'),
+                            labelText: "Rocket League"),
                       ],
                     ),
                     Column(
                       children: [
-                        CircleAvatar(
-                          foregroundImage:
-                              AssetImage('images/games/runescape.jfif'),
-                          radius: 40.0,
-                        ),
-                        TextButton(
-                          onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => EventGame(
-                                  userName: widget.userName,
-                                  eventName: 'Partida com os cria',
-                                  game: 'Runescape',
-                                  playerCount: '4',
-                                  eventTime: '13:30',
-                                  imageUrl: 'images/games/runescape.jfif',
+                        AvatarButton(
+                            radius: 42,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EventGame(
+                                    userName: widget.userName,
+                                    eventName: 'Partida com os cria',
+                                    game: 'Runescape',
+                                    playerCount: '4',
+                                    eventTime: '13:30',
+                                    imageUrl: 'images/games/runescape.jfif',
+                                  ),
                                 ),
-                              ),
-                            ),
-                          },
-                          child: Text(
-                            'Runescape',
-                            style: kSubTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
+                              );
+                            },
+                            foregroundImage:
+                                AssetImage('images/games/runescape.jfif'),
+                            labelText: "Runescape"),
                       ],
                     ),
                     Column(
                       children: [
-                        CircleAvatar(
-                          foregroundImage: AssetImage('images/games/tft.jpg'),
-                          radius: 40.0,
-                        ),
-                        TextButton(
-                          onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => EventGame(
-                                  userName: widget.userName,
-                                  eventName: 'Partida com os cria',
-                                  game: 'TeamFight Tactics',
-                                  playerCount: '4',
-                                  eventTime: '13:30',
-                                  imageUrl: 'images/games/tft.jpg',
+                        AvatarButton(
+                            radius: 42,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EventGame(
+                                    userName: widget.userName,
+                                    eventName: 'Partida com os cria',
+                                    game: 'TeamFight Tactics',
+                                    playerCount: '4',
+                                    eventTime: '13:30',
+                                    imageUrl: 'images/games/tft.jpg',
+                                  ),
                                 ),
-                              ),
-                            ),
-                          },
-                          child: Text(
-                            'TeamFight Tactics',
-                            style: kSubTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
+                              );
+                            },
+                            foregroundImage: AssetImage('images/games/tft.jpg'),
+                            labelText: "Teamfight Tatics"),
                       ],
                     ),
                     Column(
                       children: [
-                        CircleAvatar(
-                          foregroundImage:
-                              AssetImage('images/games/the_ants.jpg'),
-                          radius: 40.0,
-                        ),
-                        TextButton(
-                          onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => EventGame(
-                                  userName: widget.userName,
-                                  eventName: 'Partida com os cria',
-                                  game: 'The Ants',
-                                  playerCount: '4',
-                                  eventTime: '13:30',
-                                  imageUrl: 'images/games/the_ants.jpg',
+                        AvatarButton(
+                            radius: 42,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EventGame(
+                                    userName: widget.userName,
+                                    eventName: 'Partida com os cria',
+                                    game: 'The Ants',
+                                    playerCount: '4',
+                                    eventTime: '13:30',
+                                    imageUrl: 'images/games/the_ants.jpg',
+                                  ),
                                 ),
-                              ),
-                            ),
-                          },
-                          child: Text(
-                            'The Ants',
-                            style: kSubTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
+                              );
+                            },
+                            foregroundImage:
+                                AssetImage('images/games/the_ants.jpg'),
+                            labelText: "The Ants"),
                       ],
                     ),
                     Column(
                       children: [
-                        CircleAvatar(
-                          foregroundImage:
-                              AssetImage('images/games/warzone.jpg'),
-                          radius: 40.0,
-                        ),
-                        TextButton(
-                          onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => EventGame(
-                                  userName: widget.userName,
-                                  eventName: 'Partida com os cria',
-                                  game: 'COD: Warzone',
-                                  playerCount: '4',
-                                  eventTime: '13:30',
-                                  imageUrl: 'images/games/warzone.jpg',
+                        AvatarButton(
+                            radius: 42,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EventGame(
+                                    userName: widget.userName,
+                                    eventName: 'Partida com os cria',
+                                    game: 'COD: Warzone',
+                                    playerCount: '4',
+                                    eventTime: '13:30',
+                                    imageUrl: 'images/games/warzone.jpg',
+                                  ),
                                 ),
-                              ),
-                            ),
-                          },
-                          child: Text(
-                            'COD: Warzone',
-                            style: kSubTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
+                              );
+                            },
+                            foregroundImage:
+                                AssetImage('images/games/warzone.jpg'),
+                            labelText: "COD: Warzone"),
                       ],
                     ),
                     Column(
                       children: [
-                        CircleAvatar(
-                          foregroundImage: AssetImage('images/games/wow.jpg'),
-                          radius: 40.0,
-                        ),
-                        TextButton(
-                          onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => EventGame(
-                                  userName: widget.userName,
-                                  eventName: 'Partida com os cria',
-                                  game: 'World of Warcraft',
-                                  playerCount: '4',
-                                  eventTime: '13:30',
-                                  imageUrl: 'images/games/wow.jpg',
+                        AvatarButton(
+                            radius: 42,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EventGame(
+                                    userName: widget.userName,
+                                    eventName: 'Partida com os cria',
+                                    game: 'World of Warcraft',
+                                    playerCount: '4',
+                                    eventTime: '13:30',
+                                    imageUrl: 'images/games/wow.jpg',
+                                  ),
                                 ),
-                              ),
-                            ),
-                          },
-                          child: Text(
-                            'World of Warcraft',
-                            style: kSubTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
+                              );
+                            },
+                            foregroundImage: AssetImage('images/games/wow.jpg'),
+                            labelText: "World of Warcraft"),
                       ],
                     ),
                   ],

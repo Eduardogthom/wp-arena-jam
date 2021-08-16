@@ -6,10 +6,14 @@ class AvatarButton extends StatelessWidget {
     Key? key,
     required this.onTap,
     required this.foregroundImage,
+    required this.labelText,
+    this.radius,
   }) : super(key: key);
 
   final Function()? onTap;
   final AssetImage foregroundImage;
+  final String labelText;
+  final double? radius;
 
   @override
   Widget build(BuildContext context) {
@@ -20,14 +24,17 @@ class AvatarButton extends StatelessWidget {
           onTap: onTap,
           child: CircleAvatar(
             foregroundImage: foregroundImage,
-            radius: 45.0,
+            radius: radius ?? 45.0,
           ),
         ),
         Padding(
           padding: EdgeInsets.symmetric(vertical: 16),
           child: Text(
-            "Alterar avatar",
-            style: TextStyle(color: kWhite),
+            labelText,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: kWhite,
+            ),
           ),
         )
       ],

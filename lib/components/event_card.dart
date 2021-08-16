@@ -123,7 +123,7 @@ class EventCard extends StatelessWidget {
                               style: kSubTextStyle,
                             ),
                             Text(
-                              'Jogadores: ' + playerCount,
+                              'Jogadores: ' + playerCount + "/" + maxPlayers,
                               style: kSubTextStyle,
                             ),
                           ],

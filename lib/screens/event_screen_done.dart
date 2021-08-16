@@ -52,14 +52,8 @@ class _EventScreenDoneState extends State<EventScreenDone> {
       context: context,
       builder: (BuildContext context) {
         return Container(
+          color: kBlack,
           height: 300,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(32),
-              topRight: Radius.circular(32),
-            ),
-            color: kBlack,
-          ),
           child: Padding(
             padding: const EdgeInsets.all(15.0),
             child: Column(

@@ -55,6 +55,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           Row(
                             children: [
                               AvatarButton(
+                                  labelText: "Alterar avatar",
                                   onTap: () {},
                                   foregroundImage:
                                       AssetImage('images/users/user_6.png')),

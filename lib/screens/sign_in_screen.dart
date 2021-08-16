@@ -44,6 +44,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     AvatarButton(
+                        labelText: "Selecionar avatar",
                         onTap: () {},
                         foregroundImage: AssetImage('images/users/user_6.png'))
                   ],
