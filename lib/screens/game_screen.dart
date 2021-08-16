@@ -5,8 +5,9 @@ import 'package:wp_arena_flutter/constants.dart';
 //import 'package:wp_arena_flutter/components/gradient_bottom_navigator.dart';
 
 class GameScreen extends StatefulWidget {
-  const GameScreen({Key? key}) : super(key: key);
+  const GameScreen({Key? key, required this.userName}) : super(key: key);
   static String id = 'game_screen';
+  final String userName;
 
   @override
   _GameScreenState createState() => _GameScreenState();
@@ -39,7 +40,7 @@ class _GameScreenState extends State<GameScreen> {
                               text: 'Olá, ',
                             ),
                             new TextSpan(
-                              text: 'Gustavo',
+                              text: widget.userName,
                               style: new TextStyle(fontWeight: FontWeight.bold),
                             ),
                           ],
@@ -565,6 +566,7 @@ class _GameScreenState extends State<GameScreen> {
       ),
       bottomNavigationBar: GradientBottomNavigationBar(
         screenName: 'game',
+        userName: widget.userName,
       ),
     );
   }

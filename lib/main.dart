@@ -19,9 +19,9 @@ class WPArena extends StatelessWidget {
       routes: {
         LoginScreen.id: (context) => LoginScreen(),
         SignInScreen.id: (context) => SignInScreen(),
-        ProfileScreen.id: (context) => ProfileScreen(),
+        //ProfileScreen.id: (context) => ProfileScreen(),
         ScheduleMatchScreen.id: (context) => ScheduleMatchScreen(),
-        GameScreen.id: (context) => GameScreen(),
+        //GameScreen.id: (context) => GameScreen(),
       },
     );
   }

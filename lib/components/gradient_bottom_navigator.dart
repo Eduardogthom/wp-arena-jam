@@ -6,8 +6,10 @@ import 'package:wp_arena_flutter/screens/profile_screen.dart';
 import '../constants.dart';
 
 class GradientBottomNavigationBar extends StatefulWidget {
-  GradientBottomNavigationBar({required this.screenName});
+  GradientBottomNavigationBar(
+      {required this.screenName, required this.userName});
   final String screenName;
+  final String userName;
 
   @override
   _GradientBottomNavigationBarState createState() =>
@@ -29,7 +31,7 @@ class _GradientBottomNavigationBarState
           context,
           MaterialPageRoute(
             builder: (context) => HomeScreen(
-              userName: 'Oie',
+              userName: widget.userName,
             ),
           ),
         );
@@ -38,7 +40,9 @@ class _GradientBottomNavigationBarState
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => GameScreen(),
+            builder: (context) => GameScreen(
+              userName: widget.userName,
+            ),
           ),
         );
         break;
@@ -46,7 +50,9 @@ class _GradientBottomNavigationBarState
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => ProfileScreen(),
+            builder: (context) => ProfileScreen(
+              userName: widget.userName,
+            ),
           ),
         );
         break;
