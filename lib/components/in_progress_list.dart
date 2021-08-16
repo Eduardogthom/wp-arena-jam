@@ -55,6 +55,7 @@ class InProgressGames extends StatelessWidget {
                 rule1: 'Somente acima de Plat IV',
                 rule2: 'Somente jogadores com 5 estrelas se desempenho ',
                 rule3: 'Somente jogadores de 20 a 29 anos',
+                private: true,
               ),
               EventCard(
                 eventName: 'Minezinho com a galera',
@@ -149,6 +150,7 @@ class InProgressGames extends StatelessWidget {
                 rule1: 'Alegria',
                 rule2: 'Ludo online pelo zap',
                 rule3: 'Todas as idades',
+                private: true,
               ),
               SizedBox(
                 height: 30.0,
@@ -247,6 +249,7 @@ class InProgressGames extends StatelessWidget {
                 rule1: 'Boa comunicação',
                 rule2: 'Jogar no controle',
                 rule3: 'Acima de 18 anos',
+                private: true,
               ),
               EventCard(
                 eventName: 'Paladins safado',

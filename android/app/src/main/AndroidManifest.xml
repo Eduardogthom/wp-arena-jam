@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.wp_arena_flutter">
+    package="com.example.wp_arena">
    <application
-        android:label="wp_arena_flutter"
+        android:label="wp_arena_herojam"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

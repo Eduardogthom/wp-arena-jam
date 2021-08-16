@@ -20,6 +20,7 @@ class EventCard extends StatelessWidget {
     required this.rule2,
     required this.rule3,
     this.done = false,
+    this.private = false,
   });
 
   final String eventName;
@@ -36,6 +37,7 @@ class EventCard extends StatelessWidget {
   final String rule2;
   final String rule3;
   final bool done;
+  final bool private;
 
   @override
   Widget build(BuildContext context) {
@@ -61,6 +63,7 @@ class EventCard extends StatelessWidget {
                   rule1: rule1,
                   rule2: rule2,
                   rule3: rule3,
+                  private: private,
                 ),
               ),
             );
@@ -80,6 +83,7 @@ class EventCard extends StatelessWidget {
                   rule1: rule1,
                   rule2: rule2,
                   rule3: rule3,
+                  private: private,
                 ),
               ),
             );

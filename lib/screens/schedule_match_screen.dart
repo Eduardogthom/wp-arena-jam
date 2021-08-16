@@ -402,6 +402,7 @@ class _ScheduleMatchScreenState extends State<ScheduleMatchScreen> {
                                 game: widget.game,
                                 tag1: 'ONLINE',
                                 tag2: 'COMPETITIVO',
+                                private: _selectedGender == 'Sim' ? true : false
                               ),
                             ),
                           ),

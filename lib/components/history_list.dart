@@ -72,6 +72,7 @@ class GamesHistory extends StatelessWidget {
                 rule1: 'Somente acima de Plat IV',
                 rule2: 'Somente jogadores com 5 estrelas se desempenho ',
                 rule3: 'Somente jogadores de 20 a 29 anos',
+                private: true,
               ),
               SizedBox(
                 height: 30.0,
@@ -106,6 +107,7 @@ class GamesHistory extends StatelessWidget {
                 rule1: 'Proibido xingamentos',
                 rule2: 'Somente jogadores com 5 estrelas se desempenho',
                 rule3: 'Fazer amizades',
+                done: true,
               ),
               SizedBox(
                 height: 30.0,
@@ -140,6 +142,8 @@ class GamesHistory extends StatelessWidget {
                 rule1: 'Não fazer build de abominação',
                 rule2: 'Ser feliz',
                 rule3: 'Fazer amizades',
+                private: true,
+                done: true,
               ),
               EventCard(
                 eventName: 'TFT da alegria',
@@ -155,6 +159,7 @@ class GamesHistory extends StatelessWidget {
                 rule1: 'Não fazer build de abominação',
                 rule2: 'Ser feliz',
                 rule3: 'Fazer amizades',
+                done: true,
               ),
               EventCard(
                 eventName: 'Futeba de carro',
@@ -170,6 +175,7 @@ class GamesHistory extends StatelessWidget {
                 rule1: 'Somente grand champions',
                 rule2: 'Somente jogadores com 5 estrelas se desempenho ',
                 rule3: 'Não falar nada',
+                done: true,
               ),
             ],
           ),

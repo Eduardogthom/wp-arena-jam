@@ -20,6 +20,7 @@ class EventScreenDone extends StatefulWidget {
     required this.rule1,
     required this.rule2,
     required this.rule3,
+    this.private = false,
   });
 
   final String eventName;
@@ -35,6 +36,7 @@ class EventScreenDone extends StatefulWidget {
   final String rule1;
   final String rule2;
   final String rule3;
+  final bool private;
 
   @override
   _EventScreenDoneState createState() => _EventScreenDoneState();
@@ -256,6 +258,10 @@ class _EventScreenDoneState extends State<EventScreenDone> {
                     EventTag(
                       tagName: widget.tag2,
                     ),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    if (widget.private) EventTag(tagName: "Privado")
                   ],
                 ),
               ),
