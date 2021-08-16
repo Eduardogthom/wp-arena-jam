@@ -393,7 +393,7 @@ class _EventScreenCreatedState extends State<EventScreenCreated> {
               context,
               MaterialPageRoute(
                 builder: (context) => HomeScreen(
-                  userName: 'Sapo',
+                  userName: 'Player1154',
                 ),
               ),
             );
