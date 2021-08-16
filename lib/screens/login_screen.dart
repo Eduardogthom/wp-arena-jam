@@ -26,7 +26,8 @@ class _LoginScreenState extends State<LoginScreen> {
             width: double.infinity,
             child: SingleChildScrollView(
               physics: AlwaysScrollableScrollPhysics(),
-              padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 80.0),
+              padding: EdgeInsets.only(
+                  left: 40.0, top: 80.0, right: 40.0, bottom: 20.0),
               child: Column(
                 children: [
                   Form(

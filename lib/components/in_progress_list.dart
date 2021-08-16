@@ -58,7 +58,7 @@ class InProgressGames extends StatelessWidget {
                 private: true,
               ),
               EventCard(
-                eventName: 'Minezinho com a galera',
+                eventName: 'Minezinho galega',
                 game: 'Minecraft',
                 playerCount: '15',
                 eventTime: '13:30',
