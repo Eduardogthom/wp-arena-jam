@@ -13,6 +13,7 @@ class EventScreen extends StatefulWidget {
       required this.eventName,
       required this.game,
       required this.playerCount,
+      required this.maxPlayers,
       required this.tag1,
       required this.tag2,
       required this.rule1,
@@ -24,6 +25,7 @@ class EventScreen extends StatefulWidget {
   final String eventName;
   final String game;
   final String playerCount;
+  final String maxPlayers;
   final String eventTime;
   final String heroTag;
   final String imageUrl;
@@ -255,7 +257,7 @@ class _EventScreenState extends State<EventScreen> {
                           ),
                         ),
                         Text(
-                          widget.playerCount,
+                          widget.playerCount + "/" + widget.maxPlayers,
                           style: kGreetingTextStyle,
                         )
                       ],

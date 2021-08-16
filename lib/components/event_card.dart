@@ -77,6 +77,7 @@ class EventCard extends StatelessWidget {
                   eventName: eventName,
                   eventTime: eventTime,
                   playerCount: playerCount,
+                  maxPlayers: maxPlayers,
                   game: game,
                   tag1: tag1,
                   tag2: tag2,
