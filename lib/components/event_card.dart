@@ -94,7 +94,7 @@ class EventCard extends StatelessWidget {
           color: kGray,
           child: Container(
             child: Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(8),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
