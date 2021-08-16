@@ -54,10 +54,13 @@ class _LoginScreenState extends State<LoginScreen> {
                         SizedBox(height: 20.0),
                         Container(
                           child: Input(
-                            hintText: 'Email',
+                            nameController: nameController,
+                            hintText: 'Username',
                             enabled: true,
-                            prefixIcon: Icons.email,
-                            errorMessage: 'Por favor, digite seu email.',
+                            prefixIcon: Icons.person,
+                            errorMessage: 'Por favor, digite seu username.',
+                            hiddenText: false,
+                            hasController: true,
                           ),
                         ),
                         SizedBox(
@@ -68,6 +71,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             hintText: 'Senha',
                             enabled: true,
                             prefixIcon: Icons.lock,
+                            hiddenText: true,
                             errorMessage: 'Por favor, digite sua senha.',
                           ),
                         ),
@@ -75,13 +79,14 @@ class _LoginScreenState extends State<LoginScreen> {
                           height: 32.0,
                         ),
                         Container(
-                            height: 50.0,
-                            width: 450.0,
-                            child: SubmitButton(
-                              labelText: 'Login',
-                              formKey: _formKey,
-                              userName: 'Oie',
-                            )),
+                          height: 50.0,
+                          width: 450.0,
+                          child: SubmitButton(
+                            labelText: 'Login',
+                            formKey: _formKey,
+                            userName: nameController.text,
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -116,6 +121,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               fontFamily: 'Montserrat',
                             )),
                         onPressed: () => {
+                          print(nameController.text),
                           Navigator.push(
                             context,
                             MaterialPageRoute(

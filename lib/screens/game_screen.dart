@@ -70,6 +70,7 @@ class _GameScreenState extends State<GameScreen> {
                 hintText: 'Buscar jogo',
                 errorMessage: 'Por favor, digite o seu nome do usuário',
                 prefixIcon: Icons.search,
+                hiddenText: false,
               ),
               SizedBox(
                 height: 24.0,

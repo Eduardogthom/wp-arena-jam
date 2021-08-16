@@ -97,6 +97,7 @@ class _EventGameState extends State<EventGame> {
                 hintText: 'Buscar jogo',
                 errorMessage: 'Por favor, digite o seu nome do usuário',
                 prefixIcon: Icons.search,
+                hiddenText: false,
               ),
               SizedBox(
                 height: 20.0,

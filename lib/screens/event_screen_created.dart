@@ -359,6 +359,7 @@ class _EventScreenCreatedState extends State<EventScreenCreated> {
                           errorMessage:
                               'Por favor, digite o seu nome do usuário',
                           prefixIcon: Icons.person,
+                          hiddenText: false,
                         ),
                       ),
                     ),
@@ -392,7 +393,7 @@ class _EventScreenCreatedState extends State<EventScreenCreated> {
               context,
               MaterialPageRoute(
                 builder: (context) => HomeScreen(
-                  userName: 'Sapo',
+                  userName: 'Player1154',
                 ),
               ),
             );

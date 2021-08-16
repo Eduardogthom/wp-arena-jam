@@ -142,6 +142,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     hintText: 'marquinhos_hotrodas@hotmail.com',
                     errorMessage: 'Não necessário',
                     prefixIcon: Icons.email,
+                    hiddenText: false,
                   ),
                 ),
               ),
@@ -156,6 +157,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   hintText: '04/05/1999',
                   errorMessage: 'Não necessário',
                   prefixIcon: Icons.calendar_today,
+                  hiddenText: false,
                 ),
               ),
               SizedBox(height: 25.0),
@@ -217,6 +219,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               hintText: 'Senha',
                               errorMessage: 'Por favor, digite sua nova senha.',
                               prefixIcon: Icons.lock,
+                              hiddenText: true,
                             ),
                             SizedBox(
                               height: 15.0,
@@ -227,6 +230,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               errorMessage:
                                   'Por favor, confirme sua nova senha.',
                               prefixIcon: Icons.lock,
+                              hiddenText: true,
                             ),
                             SizedBox(
                               height: 32.0,
