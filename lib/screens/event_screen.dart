@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wp_arena_flutter/components/event_tag.dart';
+import 'package:wp_arena_flutter/components/input.dart';
+import 'package:wp_arena_flutter/components/submit_button.dart';
 
 import '../constants.dart';
 
@@ -24,6 +26,7 @@ class EventScreen extends StatefulWidget {
 }
 
 class _EventScreenState extends State<EventScreen> {
+  final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -262,7 +265,56 @@ class _EventScreenState extends State<EventScreen> {
               ),
               SizedBox(
                 height: 15,
-              )
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      height: 60.0,
+                      width: double.infinity,
+                      child: Divider(
+                        color: Colors.white,
+                      ),
+                    ),
+                    RichText(
+                      textAlign: TextAlign.left,
+                      text: new TextSpan(
+                        style: kGreetingTextStyle,
+                        children: <TextSpan>[
+                          new TextSpan(
+                            text: 'Registrar-se na partida',
+                            style: new TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(0, 25, 0, 15),
+                      child: Form(
+                        key: _formKey,
+                        child: Input(
+                          enabled: true,
+                          hintText: 'Nome de usuário',
+                          errorMessage:
+                              'Por favor, digite o seu nome do usuário',
+                          prefixIcon: Icons.person,
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    SubmitButton(
+                      formKey: _formKey,
+                      labelText: 'Confirmar',
+                      userName: 'Uepa',
+                      //userName: widget.userName,
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),

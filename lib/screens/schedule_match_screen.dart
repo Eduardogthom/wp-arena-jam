@@ -23,10 +23,11 @@ class _ScheduleMatchScreenState extends State<ScheduleMatchScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: kBlack,
+        centerTitle: true,
         elevation: 0,
         title: Text(
           "Cadastro de partida",
-          style: TextStyle(color: kWhite),
+          style: kGreetingTextStyle,
         ),
         leading: BackButton(
           color: kWhite,
