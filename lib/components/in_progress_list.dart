@@ -52,6 +52,9 @@ class InProgressGames extends StatelessWidget {
                 maxPlayers: "5",
                 tag1: 'MOBA',
                 tag2: 'ONLINE',
+                rule1: 'Somente acima de Plat IV',
+                rule2: 'Somente jogadores com 5 estrelas se desempenho ',
+                rule3: 'Somente jogadores de 20 a 29 anos',
               ),
               EventCard(
                 eventName: 'Minezinho com a galera',
@@ -64,6 +67,9 @@ class InProgressGames extends StatelessWidget {
                 maxPlayers: "15",
                 tag1: 'SANDBOX',
                 tag2: 'CRIATIVO',
+                rule1: 'Criatividade',
+                rule2: 'Somente jogadores com 5 estrelas de comportamento ',
+                rule3: 'Todas as idades',
               ),
               EventCard(
                 eventName: 'Mix CS: GO',
@@ -76,6 +82,9 @@ class InProgressGames extends StatelessWidget {
                 maxPlayers: "5",
                 tag1: 'FPS',
                 tag2: 'COMPETITIVO',
+                rule1: 'Criatividade',
+                rule2: 'Somente jogadores com 5 estrelas de desempenho ',
+                rule3: 'Todas as idades',
               ),
               SizedBox(
                 height: 30.0,
@@ -107,6 +116,9 @@ class InProgressGames extends StatelessWidget {
                 maxPlayers: "5",
                 tag1: 'BATTLE ROYALE',
                 tag2: 'ONLINE',
+                rule1: 'Alegria',
+                rule2: 'Somente jogadores com 5 estrelas de comportamento ',
+                rule3: 'Todas as idades',
               ),
               EventCard(
                 eventName: 'Grind de Wowzinho',
@@ -119,6 +131,9 @@ class InProgressGames extends StatelessWidget {
                 maxPlayers: "15",
                 tag1: 'MMORPG',
                 tag2: 'ONLINE',
+                rule1: 'Alegria',
+                rule2: 'Somente jogadores com 5 estrelas de comportamento ',
+                rule3: 'Todas as idades',
               ),
               EventCard(
                 eventName: 'Ludo alucinante',
@@ -131,6 +146,9 @@ class InProgressGames extends StatelessWidget {
                 maxPlayers: "5",
                 tag1: 'TABULEIRO',
                 tag2: 'ONLINE',
+                rule1: 'Alegria',
+                rule2: 'Ludo online pelo zap',
+                rule3: 'Todas as idades',
               ),
               SizedBox(
                 height: 30.0,
@@ -154,7 +172,7 @@ class InProgressGames extends StatelessWidget {
               EventCard(
                 eventName: 'X1 no futeba',
                 game: 'PES2021',
-                playerCount: '3/5',
+                playerCount: '2',
                 eventTime: '19:30',
                 imageUrl: 'images/games/pes.jpg',
                 heroTag: getRandomString(5),
@@ -162,6 +180,9 @@ class InProgressGames extends StatelessWidget {
                 maxPlayers: "5",
                 tag1: 'FUTEBOL',
                 tag2: 'ONLINE',
+                rule1: 'Alegria',
+                rule2: 'Somente jogadores com 5 estrelas de comportamento ',
+                rule3: 'Todas as idades',
               ),
               EventCard(
                 eventName: 'Warzone da emoção',
@@ -174,6 +195,9 @@ class InProgressGames extends StatelessWidget {
                 maxPlayers: "15",
                 tag1: 'BATTLE ROYALE',
                 tag2: 'FPS',
+                rule1: 'Mira boa',
+                rule2: 'Acima de 4.5 estrelas de desempenho',
+                rule3: 'Acima de 18 anos',
               ),
               EventCard(
                 eventName: 'Futeba de carro',
@@ -186,6 +210,9 @@ class InProgressGames extends StatelessWidget {
                 maxPlayers: "5",
                 tag1: 'FUTEBOL',
                 tag2: 'CORRIDA',
+                rule1: 'Futebol de carro',
+                rule2: 'Vrum vrum',
+                rule3: 'Gol',
               ),
               SizedBox(
                 height: 30.0,
@@ -217,6 +244,9 @@ class InProgressGames extends StatelessWidget {
                 maxPlayers: "5",
                 tag1: 'FUTEBOL',
                 tag2: 'ONLINE',
+                rule1: 'Boa comunicação',
+                rule2: 'Jogar no controle',
+                rule3: 'Acima de 18 anos',
               ),
               EventCard(
                 eventName: 'Paladins safado',
@@ -229,6 +259,9 @@ class InProgressGames extends StatelessWidget {
                 maxPlayers: "15",
                 tag1: 'COMPETITIVO',
                 tag2: 'FPS',
+                rule1: 'Não jogar overwatch',
+                rule2: 'Jogar no controle',
+                rule3: 'Acima de 18 anos',
               ),
               EventCard(
                 eventName: 'Grind no Destiny',
@@ -241,6 +274,9 @@ class InProgressGames extends StatelessWidget {
                 maxPlayers: "5",
                 tag1: 'RPG',
                 tag2: 'FPS',
+                rule1: 'Boneco com 3k de rating',
+                rule2: 'Jogar com Discord',
+                rule3: 'Acima de 18 anos',
               ),
             ],
           ),

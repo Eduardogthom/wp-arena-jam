@@ -15,6 +15,9 @@ class EventScreen extends StatefulWidget {
       required this.playerCount,
       required this.tag1,
       required this.tag2,
+      required this.rule1,
+      required this.rule2,
+      required this.rule3,
       required this.eventTime});
 
   final String eventName;
@@ -25,6 +28,9 @@ class EventScreen extends StatefulWidget {
   final String imageUrl;
   final String tag1;
   final String tag2;
+  final String rule1;
+  final String rule2;
+  final String rule3;
   @override
   _EventScreenState createState() => _EventScreenState();
 }
@@ -133,7 +139,7 @@ class _EventScreenState extends State<EventScreen> {
                           ),
                           Expanded(
                             child: Text(
-                              'Proibido xingamentos;',
+                              widget.rule1 + ';',
                               style: kDefaultRuleStyle,
                             ),
                           ),
@@ -151,7 +157,7 @@ class _EventScreenState extends State<EventScreen> {
                           ),
                           Expanded(
                             child: Text(
-                              'Somente jogadores acima de 20 anos;',
+                              widget.rule2 + ';',
                               style: kDefaultRuleStyle,
                             ),
                           ),
@@ -169,7 +175,7 @@ class _EventScreenState extends State<EventScreen> {
                           ),
                           Expanded(
                             child: Text(
-                              'Fazer amizades.',
+                              widget.rule3 + '.',
                               style: kDefaultRuleStyle,
                             ),
                           ),

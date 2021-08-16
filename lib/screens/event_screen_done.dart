@@ -17,6 +17,9 @@ class EventScreenDone extends StatefulWidget {
     required this.maxPlayers,
     required this.tag1,
     required this.tag2,
+    required this.rule1,
+    required this.rule2,
+    required this.rule3,
   });
 
   final String eventName;
@@ -29,6 +32,9 @@ class EventScreenDone extends StatefulWidget {
   final String maxPlayers;
   final String tag1;
   final String tag2;
+  final String rule1;
+  final String rule2;
+  final String rule3;
 
   @override
   _EventScreenDoneState createState() => _EventScreenDoneState();
@@ -327,7 +333,7 @@ class _EventScreenDoneState extends State<EventScreenDone> {
                           ),
                           Expanded(
                             child: Text(
-                              'Proibido xingamentos;',
+                              widget.rule1 + ';',
                               style: kDefaultRuleStyle,
                             ),
                           ),
@@ -345,7 +351,7 @@ class _EventScreenDoneState extends State<EventScreenDone> {
                           ),
                           Expanded(
                             child: Text(
-                              'Somente jogadores acima de 20 anos;',
+                              widget.rule2 + ';',
                               style: kDefaultRuleStyle,
                             ),
                           ),
@@ -363,7 +369,7 @@ class _EventScreenDoneState extends State<EventScreenDone> {
                           ),
                           Expanded(
                             child: Text(
-                              'Fazer amizades.',
+                              widget.rule3 + '.',
                               style: kDefaultRuleStyle,
                             ),
                           ),

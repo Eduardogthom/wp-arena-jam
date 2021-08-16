@@ -67,6 +67,9 @@ class CreateGameList extends StatelessWidget {
                 maxPlayers: "5",
                 tag1: 'COMPETITIVO',
                 tag2: 'ONLINE',
+                rule1: 'Boa comunicação',
+                rule2: 'Jogar no controle',
+                rule3: 'Acima de 18 anos',
               ),
               EventCard(
                 eventName: 'Dar uma upada de leves',
@@ -79,6 +82,9 @@ class CreateGameList extends StatelessWidget {
                 maxPlayers: "15",
                 tag1: 'COMPETITIVO',
                 tag2: 'ONLINE',
+                rule1: 'Boa comunicação',
+                rule2: 'Jogar no controle',
+                rule3: 'Acima de 18 anos',
               ),
               SizedBox(
                 height: 30.0,
@@ -113,6 +119,9 @@ class CreateGameList extends StatelessWidget {
                 maxPlayers: "5",
                 tag1: 'COMPETITIVO',
                 tag2: 'ONLINE',
+                rule1: 'Boa comunicação',
+                rule2: 'Jogar no controle',
+                rule3: 'Acima de 18 anos',
               ),
               EventCard(
                 eventName: "Cai de rank :'(",
@@ -125,6 +134,9 @@ class CreateGameList extends StatelessWidget {
                 maxPlayers: "15",
                 tag1: 'COMPETITIVO',
                 tag2: 'ONLINE',
+                rule1: 'Boa comunicação',
+                rule2: 'Jogar no controle',
+                rule3: 'Acima de 18 anos',
               ),
               EventCard(
                 eventName: 'Pipoco em Dó Maior',
@@ -137,6 +149,9 @@ class CreateGameList extends StatelessWidget {
                 maxPlayers: "5",
                 tag1: 'COMPETITIVO',
                 tag2: 'ONLINE',
+                rule1: 'Boa comunicação',
+                rule2: 'Jogar no controle',
+                rule3: 'Acima de 18 anos',
               ),
               SizedBox(
                 height: 30.0,
