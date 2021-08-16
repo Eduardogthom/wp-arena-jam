@@ -14,6 +14,8 @@ class EventCard extends StatelessWidget {
     required this.heroTag,
     required this.totalPlayers,
     required this.maxPlayers,
+    required this.tag1,
+    required this.tag2,
     this.done = false,
   });
 
@@ -25,6 +27,8 @@ class EventCard extends StatelessWidget {
   final String heroTag;
   final String totalPlayers;
   final String maxPlayers;
+  final String tag1;
+  final String tag2;
   final bool done;
 
   @override
@@ -46,6 +50,8 @@ class EventCard extends StatelessWidget {
                   game: game,
                   totalPlayers: totalPlayers,
                   maxPlayers: maxPlayers,
+                  tag1: tag1,
+                  tag2: tag2,
                 ),
               ),
             );
@@ -60,6 +66,8 @@ class EventCard extends StatelessWidget {
                   eventTime: eventTime,
                   playerCount: playerCount,
                   game: game,
+                  tag1: tag1,
+                  tag2: tag2,
                 ),
               ),
             );

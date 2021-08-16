@@ -15,6 +15,8 @@ class EventScreenDone extends StatefulWidget {
     required this.eventTime,
     required this.totalPlayers,
     required this.maxPlayers,
+    required this.tag1,
+    required this.tag2,
   });
 
   final String eventName;
@@ -25,6 +27,8 @@ class EventScreenDone extends StatefulWidget {
   final String imageUrl;
   final String totalPlayers;
   final String maxPlayers;
+  final String tag1;
+  final String tag2;
 
   @override
   _EventScreenDoneState createState() => _EventScreenDoneState();
@@ -237,11 +241,15 @@ class _EventScreenDoneState extends State<EventScreenDone> {
                 padding: EdgeInsets.symmetric(vertical: 15, horizontal: 20),
                 child: Row(
                   children: [
-                    EventTag(),
+                    EventTag(
+                      tagName: widget.tag1,
+                    ),
                     SizedBox(
                       width: 15,
                     ),
-                    EventTag(),
+                    EventTag(
+                      tagName: widget.tag2,
+                    ),
                   ],
                 ),
               ),
