@@ -20,7 +20,6 @@ class WPArena extends StatelessWidget {
         //ProfileScreen.id: (context) => ProfileScreen(),
         ScheduleMatchScreen.id: (context) => ScheduleMatchScreen(),
         // GameScreen.id: (context) => GameScreen(),
-      
       },
     );
   }
