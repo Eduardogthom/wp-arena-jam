@@ -75,7 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       });
                     },
                     child: Text(
-                      'Em andamento',
+                      'Cadastradas',
                       style: _inProgress
                           ? kActiveFilterTextStyle
                           : kUnactiveFilterTextStyle,
